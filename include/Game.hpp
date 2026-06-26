@@ -49,6 +49,7 @@ private:
     
     bool soundEnabled;
     bool autoPlace;
+    bool fullscreen;
     
     float animTimer;
     int menuSelection;
@@ -62,6 +63,8 @@ private:
     void handleEvents();
     void update(float dt);
     void render();
+    
+    void applyFullscreen();
     
     void renderMenu();
     void renderSettings();
