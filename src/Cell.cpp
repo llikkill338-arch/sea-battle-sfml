@@ -1,1 +1,89 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIENlbGwuY3BwIC0g0KDQsNCx0L7RgtCw0L3QvdGL0YUg0LrQvtC80LzQtdC90YLQsCDQutC+0LzQvNC10L3RgtCwCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiNpbmNsdWRlICJDZWxsLmhwcCIKI2luY2x1ZGUgPENvbnN0YW50cy5ocHA+Cgp1c2luZyBuYW1lc3BhY2UgQ29sb3JzOwoKQ2VsbDo6Q2VsbCgpIDogc3RhdGUoQ2VsbFN0YXRlOjpFbXB0eSksIGhvdmVyKGZhbHNlKSB7fQoKQ2VsbFN0YXRlIENlbGw6OmdldFN0YXRlKCkgY29uc3QgewogICAgcmV0dXJuIHN0YXRlOwp9Cgp2b2lkIENlbGw6OnNldFN0YXRlKENlbGxTdGF0ZSBzKSB7CiAgICBzdGF0ZSA9IHM7Cn0KCnZvaWQgQ2VsbDo6c2V0SG92ZXIoYm9vbCBoKSB7CiAgICBob3ZlciA9IGg7Cn0KCmJvb2wgQ2VsbDo6aXNIb3ZlcmVkKCkgY29uc3QgewogICAgcmV0dXJuIGhvdmVyOwp9Cgp2b2lkIENlbGw6OmRyYXcoc2Y6OlJlbmRlcldpbmRvdyYgd2luZG93LCBmbG9hdCB4LCBmbG9hdCB5LCBmbG9hdCBzaXplLAogICAgICAgICAgICAgIGJvb2wgc2hvd1NoaXAsIGJvb2wgaXNDdXJzb3IpIHsKICAgIAogICAgc2Y6OlJlY3RhbmdsZVNoYXBlIHNoYXBlOwogICAgc2hhcGUuc2V0U2l6ZShzZjpWZWN0b3IyZihzaXplLCBzaXplKSk7CiAgICBzaGFwZS5zZXRQb3NpdGlvbih4LCB5KTsKICAgIAogICAgc2Y6OkNvbG9yIGZpbGxDb2xvcjsKICAgIAogICAgc3dpdGNoIChzdGF0ZSkgewogICAgICAgIGNhc2UgQ2VsbFN0YXRlOjpFbXB0eToKICAgICAgICAgICAgZmlsbENvbG9yID0gV0FURVI7CiAgICAgICAgICAgIGJyZWFrOwogICAgICAgIGNhc2UgQ2VsbFN0YXRlOjpTaGlwOgogICAgICAgICAgICBmaWxsQ29sb3IgPSBzaG93U2hpcCA/IFNISVAgOiBXQVRFUjsKICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgY2FzZSBDZWxsU3RhdGU6OkhpdDoKICAgICAgICAgICAgZmlsbENvbG9yID0gSElUOgogICAgICAgICAgICBicmVhazsKICAgICAgICBjYXNlIENlbGxTdGF0ZTo6TWlzczoKICAgICAgICAgICAgZmlsbENvbG9yID0gTUlTUzsKICAgICAgICAgICAgYnJlYWs7CiAgICB9CiAgICAKICAgIGlmIChpc0N1cnNvcikgewogICAgICAgIGZpbGxDb2xvciA9IENVUlNPUjsKICAgIH0KICAgIAogICAgc2hhcGUuc2V0RmlsbENvbG9yKGZpbGxDb2xvcik7CiAgICAKICAgIHNmOjpDb2xvciBvdXRsaW5lQ29sb3IgPSBpc0N1cnNvciA/IHNmOjpDb2xvcjo6V2hpdGUgOiBHUklEX0xJTkU7CiAgICBmbG9hdCBvdXRsaW5lVGhpY2tuZXNzID0gaXNDdXJzb3IgPyAzLjBmIDogMS4wZjsKICAgIHNoYXBlLnNld091dGxpbmVDb2xvcihvdXRsaW5lQ29sb3IpOwogICAgc2hhcGUuc2V0T3V0bGluZVRoaWNrbmVzcyhvdXRsaW5lVGhpY2tuZXNzKTsKICAgIAogICAgd2luZG93LmRyYXcoc2hhcGUpOwogICAgCiAgICAvLyDQodC+0LLQtdGA0LfQtdC90LjQtSDRgdC10LvQjNCx0L7RgCDRgtCw0LrQttCwCiAgICBpZiAoc3RhdGUgPT0gQ2VsbFN0YXRlOjpIaXQpIHsKICAgICAgICBzZjo6UmVjdGFuZ2xlU2hhcGUgbGluZTEoc2Y6OlZlY3RvcjJmKHNpemUgKiAwLjZmLCAzKSk7CiAgICAgICAgbGluZTEuc2V0T3JpZ2luKGxpbmUxLmdldFNpemUoKSAvIDIuZik7CiAgICAgICAgbGluZTEuc2V0UG9zaXRpb24oeCArIHNpemUgLyAyLCB5ICsgc2l6ZSAvIDIpOwogICAgICAgIGxpbmUxLnNldFJvdGF0aW9uKDQ1KTsKICAgICAgICBsaW5lMS5zZXRGaWxsQ29sb3Ioc2Y6OkNvbG9yOjpXaGl0ZSk7CiAgICAgICAgCiAgICAgICAgc2Y6OlJlY3RhbmdsZVNoYXBlIGxpbmUyKHNmOjpWZWN0b3IyZihzaXplICogMC42ZiwgMykpOwogICAgICAgIGxpbmUyLnNldE9yaWdpbihsaW5lMi5nZXRTaXplKCkgLyAyLmYpOwogICAgICAgIGxpbmUyLnNldFBvc2l0aW9uKHggKyBzaXplIC8gMiwgeSArIHNpemUgLyAyKTsKICAgICAgICBsaW5lMi5zZXRSb3RhdGlvbigtNDUpOwogICAgICAgIGxpbmUyLnNldEZpbGxDb2xvcihzZjpDb2xvcjo6V2hpdGUpOwogICAgICAgIAogICAgICAgIHdpbmRvdy5kcmF3KGxpbmUxKTsKICAgICAgICB3aW5kb3cuZHJhdyhsaW5lMik7CiAgICB9CiAgICBlbHNlIGlmIChzdGF0ZSA9PSBDZWxsU3RhdGU6Ok1pc3MpIHsKICAgICAgICBzZjo6Q2lyY2xlU2hhcGUgY2lyY2xlOwoJY2lyY2xlLnNldFJhZGl1cyhzaXplICogMC4xNWYpOwoJY2lyY2xlLnNldE9yaWdpbihzaXplICogMC4xNWYsIHNpemUgKiAwLjE1Zik7CiAgICAgICAgY2lyY2xlLnNldFBvc2l0aW9uKHggKyBzaXplIC8gMiwgeSArIHNpemUgLyAyKTsKICAgICAgICBjaXJjbGUuc2V0RmlsbENvbG9yKE1JU1MpOwogICAgICAgIHdpbmRvdy5kcmF3KGNpcmNsZSk7CiAgICB9Cn0K
+// ============================================================================
+// Cell.cpp - Реализация клетки
+// ============================================================================
+
+#include "Cell.hpp"
+#include "Constants.hpp"
+
+using namespace Colors;
+
+Cell::Cell() : state(CellState::Empty), hover(false) {}
+
+CellState Cell::getState() const {
+    return state;
+}
+
+void Cell::setState(CellState s) {
+    state = s;
+}
+
+void Cell::setHover(bool h) {
+    hover = h;
+}
+
+bool Cell::isHovered() const {
+    return hover;
+}
+
+void Cell::draw(sf::RenderWindow& window, float x, float y, float size,
+                bool showShip, bool isCursor) {
+    
+    sf::RectangleShape shape;
+    shape.setSize(sf::Vector2f(size, size));
+    shape.setPosition(x, y);
+    
+    sf::Color fillColor;
+    
+    switch (state) {
+        case CellState::Empty:
+            fillColor = WATER;
+            break;
+        case CellState::Ship:
+            fillColor = showShip ? SHIP : WATER;
+            break;
+        case CellState::Hit:
+            fillColor = HIT;
+            break;
+        case CellState::Miss:
+            fillColor = MISS;
+            break;
+    }
+    
+    if (isCursor) {
+        fillColor = CURSOR;
+    }
+    
+    shape.setFillColor(fillColor);
+    
+    sf::Color outlineColor = isCursor ? sf::Color::White : GRID_LINE;
+    float outlineThickness = isCursor ? 3.0f : 1.0f;
+    shape.setOutlineColor(outlineColor);
+    shape.setOutlineThickness(outlineThickness);
+    
+    window.draw(shape);
+    
+    if (state == CellState::Hit) {
+        sf::RectangleShape line1(sf::Vector2f(size * 0.6f, 3));
+        line1.setOrigin(line1.getSize() / 2.f);
+        line1.setPosition(x + size / 2, y + size / 2);
+        line1.setRotation(45);
+        line1.setFillColor(sf::Color::White);
+        
+        sf::RectangleShape line2(sf::Vector2f(size * 0.6f, 3));
+        line2.setOrigin(line2.getSize() / 2.f);
+        line2.setPosition(x + size / 2, y + size / 2);
+        line2.setRotation(-45);
+        line2.setFillColor(sf::Color::White);
+        
+        window.draw(line1);
+        window.draw(line2);
+    }
+    else if (state == CellState::Miss) {
+        sf::CircleShape circle;
+        circle.setRadius(size * 0.15f);
+        circle.setOrigin(size * 0.15f, size * 0.15f);
+        circle.setPosition(x + size / 2, y + size / 2);
+        circle.setFillColor(sf::Color(150, 150, 150));
+        window.draw(circle);
+    }
+}

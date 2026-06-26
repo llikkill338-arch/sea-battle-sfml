@@ -1,1 +1,183 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIEJvYXJkLmNwcCAtINCg0LDRgtC+0YDQuNGC0LXQudGC0LDQvdC40LUg0LrQvtC80LzQtdC90YLQsCDQtNCwIDEweDEwCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiNpbmNsdWRlICJCb2FyZC5ocHAiCiNpbmNsdWRlIDxjYWxnb3JpdGhtPgoKdXNpbmcgbmFtZXNwYWNlIENvbG9yczsKCm5hbWVzcGFjZSB7CiAgICBpbnQgY2VsbFJYKGludCByKSB7IHJldHVybiByOyB9CiAgICBpbnQgY2VsbENZKGludCBjKSB7IHJldHVybiBjOyB9Cn0KCmJv2wgQm9hcmQ6OmluQm91bmRzKGludCByLCBpbnQgYykgY29uc3QgewogICAgcmV0dXJuIHIgPj0gMCAmJiByIDwgQk9BUkRfU0laRSAmJiBjID49IDAgJiYgYyA8IEJPQVJEX1NJWkU7Cn0KCmJvb2wgQm9hcmQ6OmNhblBsYWNlU2hpcChpbnQgciwgaW50IGMsIGludCBzaXplLCBib29sIGhvcml6b250YWwpIGNvbnN0IHsKICAgIGlmIChob3Jpem9udGFsKSB7IGlmIChjICsgc2l6ZSA+IEJPQVJEX1NJWkUpIHJldHVybiBmYWxzZTsgfQogICAgZWxzZSAgICAgICAgICAgIHsgaWYgKHIgKyBzaXplID4gQk9BUkRfU0laRSkgcmV0dXJuIGZhbHNlOyB9CiAgICAKICAgIGludCBtaW5SID0gc3RkbTptYXgoMCwgcibmIC0gMSk7CiAgICBpbnQgbWF4UiA9IHN0ZDo6bWluKEJPQVJEX1NJWkUgLSAxLCAoaG9yaXpvbnRhbCA/IHIgOiByICsgc2l6ZSAtIDEpICsgMSk7CiAgICBpbnQgbWluQyA9IHN0ZDo6bWF4KDAsIGMgLSAxKTsKICAgIGludCBtYXhDID0gc3RkOjptaW4oQk9BUkRfU0laRSAtIDEsIChob3Jpem9udGFsID8gYyArIHNpemUgLSAxIDogYykgKyAxKTsKICAgIAogICAgZm9yIChpbnQgcnIgPSBtaW5SOyByciA8PSBtYXhSOyBycisrKSB7CiAgICAgICAgZm9yIChpbnQgY2MgPSBtaW5DOyBjYyA8PSBtYXhDOyBjYysrKSB7CiAgICAgICAgICAgIGlmIChjZWxsc1tycl1bY2NdLmdldFN0YXRlKCkgPT0gQ2VsbFN0YXRlOjpTaGlwKSByZXR1cm4gZmFsc2U7CiAgICAgICAgfQogICAgfQogICAgcmV0dXJuIHRydWU7Cn0KCmJvb2wgQm9hcmQ6OnBsYWNlU2hpcChpbnQgciwgaW50IGMsIGludCBzaXplLCBib29sIGhvcml6b250YWwpIHsKICAgIGlmICghY2FuUGxhY2VTaGlwKHIsIGMsIHNpemUsIGhvcml6b250YWwpKSByZXR1cm4gZmFsc2U7CiAgICAKICAgIGF1dG8gc2hpcCA9IHN0ZDo6bWFrZV91bmlxdWU8U2hpcD4oc2l6ZSwgciwgYywgaG9yaXpvbnRhbCk7CiAgICAKICAgIGZvciAoaW50IGkgPSAwOyBpIDwgc2l6ZTsgaSsrKSB7CiAgICAgICAgaW50IHJyID0gaG9yaXpvbnRhbCA/IHIgOiByICsgaTsKICAgICAgICBpbnQgY2MgPSBob3Jpem9udGFsID8gYyArIGkgOiBjOwogICAgICAgIGNlbGxzW3JyXVtjY10uc2V0U3RhdGUoQ2VsbFN0YXRlOjpTaGlwKTsKICAgIH0KICAgIAogICAgc2hpcHMucHVzaF9iYWNrKHN0ZDo6bW92ZShzaGlwKSk7CiAgICByZXR1cm4gdHJ1ZTsKfQoKdm9pZCBCb2FyZDo6YXV0b1BsYWNlKCkgewogICAgZm9yIChpbnQgaSA9IDA7IGkgPCBGTEVFVF9DT1VOVDsgaSsrKSB7CiAgICAgICAgaW50IHNpemUgPSBGTEVUX1NJWkVTW2ldOwogICAgICAgIGJvb2wgcGxhY2VkID0gZmFsc2U7CiAgICAgICAgaW50IGF0dGVtcHRzID0gMDsKICAgICAgICB3aGlsZSAoIXBsYWNlZCAmJiBhdHRlbXB0cyA8IDEwMDApIHsKICAgICAgICAgICAgaW50IHIgPSByYW5kKCkgJSBCT0FSRF9TSVpFOwogICAgICAgICAgICBpbnQgYyA9IHJhbmQoKSAlIEJPQVJEX1NJWkU7CiAgICAgICAgICAgIGJvb2wgaG9yaXogPSByYW5kKCkgJSAyOwogICAgICAgICAgICBwbGFjZWQgPSBwbGFjZVNoaXAociwgYywgc2l6ZSwgaG9yaXopOwogICAgICAgICAgICBhdHRlbXB0cysrOwogICAgICAgIH0KICAgIH0KfQoKdm9pZCBCb2FyZDo6Y2xlYXIoKSB7CiAgICBmb3IgKGludCByID0gMDsgciA8IEJPQVJEX1NJWkU7IHIrKykKICAgICAgICBmb3IgKGludCBjID0gMDsgYyA8IEJPQVJEX1NJWkU7IGMrKykKICAgICAgICAgICAgY2VsbHNbcl1bY10uc2V0U3RhdGUoQ2VsbFN0YXRlOjpFbXB0eSk7CiAgICBzaGlwcy5jbGVhcigpOwp9Cgpib29sIEJvYXJkOjpzaG9vdChpbnQgciwgaW50IGMpIHsKICAgIGlmICghaW5Cb3VuZHMociwgYykpIHJldHVybiBmYWxzZTsKICAgIAogICAgQ2VsbFN0YXRlIHMgPSBjZWxsc1tyXVtjXS5nZXRTdGF0ZSgpOwogICAgaWYgKHMgPT0gQ2VsbFN0YXRlOjpIaXQgfHwgcyA9PSBDZWxsU3RhdGU6Ok1pc3MpIHJldHVybiBmYWxzZTsKICAgIAogICAgaWYgKHMgPT0gQ2VsbFN0YXRlOjpTaGlwKSB7CiAgICAgICAgY2VsbHNbcl1bY10uc2V0U3RhdGUoQ2VsbFN0YXRlOjpIaXQpOwogICAgICAgIGZvciAoYXV0byYgc2hpcCA6IHNoaXBzKSB7CiAgICAgICAgICAgIGlmIChzaGlwLT5odW5jaGVzKHIsIGMpKSB7CiAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0gZWxzZSB7CiAgICAgICAgY2VsbHNbcl1bY10uc2V0U3RhdGUoQ2VsbFN0YXRlOjpNaXNzKTsKICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9Cn0KCmJvb2wgQm9hcmQ6OmFsbFNoaXBzU3VuaygpIGNvbnN0IHsKICAgIGlmIChzaGlwcy5lbXB0eSgpKSByZXR1cm4gZmFsc2U7CiAgICBmb3IgKGNvbnN0IGF1dG8mIHNoaXAgOiBzaGlwcykgewogICAgICAgIGlmICghc2hpcC0+aXNTdW5rKCkpIHJldHVybiBmYWxzZTsKICAgIH0KICAgIHJldHVybiB0cnVlOwp9Cgpib29sIEJvYXJkOjpoYXNTaGlwQXQoaW50IHIwIGludCBjKSBjb25zdCB7CiAgICByZXR1cm4gaW5Cb3VuZHMociwgYykgJiYgY2VsbHNbcl1bY10uZ2V0U3RhdGUoKSA9PSBDZWxsU3RhdGU6OlNoaXA7Cn0KCmludCBCb2FyZDo6Z2V0U2hpcHNBbGl2ZSgpIGNvbnN0IHsKICAgIGludCBjb3VudCA9IDA7CiAgICBmb3IgKGNvbnN0IGF1dG8mIHNoaXAgOiBzaGlwcykgewogICAgICAgIGlmICghc2hpcC0+aXNTdW5rKCkpIGNvdW50Kys7CiAgICB9CiAgICByZXR1cm4gY291bnQ7Cn0KCkNlbGxTdGF0ZSBCb2FyZDo6Z2V0Q2VsbFN0YXRlKGludCByLCBpbnQgYykgY29uc3QgewogICAgcmV0dXJuIGluQm91bmRzKHIsIGMpID8gY2VsbHNbcl1bY10uZ2V0U3RhdGUoKSA6IENlbGxTdGF0ZTo6RW1wdHk7Cn0KCnZvaWQgQm9hcmQ6OnNldENlbGxTdGF0ZShpbnQgciwgaW50IGMsIENlbGxTdGF0ZSBzKSB7CiAgICBpZiAoaW5Cb3VuZHMociwgYykpIGNlbGxzW3JdW2NdLnNldFN0YXRlKHMpOwp9Cgp2b2lkIEJvYXJkOjpkcmF3KHNmOjpSZW5kZXJXaW5kb3cmIHdpbmRvdywgc2Y6OkZvbnQmIGZvbnQsCiAgICAgICAgICAgICAgaW50IGN1cnNvclIsIGludCBjdXJzb3JDLCBib29sIHNob3dTaGlwcywKICAgICAgICAgICAgICBpbnQgZ2hvc3RTaXplLCBib29sIGdob3N0RGlyLCBib29sIGdob3N0VmFsaWQpIHsKICAgIGRyYXdHcmlkKHdpbmRvdywgZm9udCk7CiAgICAKICAgIGZvciAoaW50IHIgPSAwOyByIDwgQk9BUkRfU0laRTsgcisrKSB7CiAgICAgICAgZm9yIChpbnQgYyA9IDA7IGMgPCBCT0FSRF9TSVpFOyBjKyspIHsKICAgICAgICAgICAgZmxvYXQgeCA9IG9mZnNldFggKyAzMCArIGMgKiAoQ0VMTF9TSVpFICsgQ0VMTF9NQVJHSU4pOwogICAgICAgICAgICBmbG9hdCB5ID0gb2Zmc2V0WSArIDMwICsgciAqIChDRUxMX1NJWkUgKyBDRUxMX01BUkdJTik7CiAgICAgICAgICAgIAogICAgICAgICAgICBib29sIGlzQ3Vyc29yID0gKHIgPT0gY3Vyc29yUiAmJiBjID09IGN1cnNvckMpOwogICAgICAgICAgICBib29sIGlzR2hvc3QgPSBmYWxzZTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGlmIChnaG9zdFNpemUgPiAwICYmIGN1cnNvclIgPj0gMCAmJiBjdXJzb3JDIj49IDApIHsKICAgICAgICAgICAgICAgIGlmIChnaG9zdERpcikgewogICAgICAgICAgICAgICAgICAgIGlzR2hvc3QgPSAociA9PSBjdXJzb3JSICYmIGMgPj0gY3Vyc29yQyAmJiBjIDwgY3Vyc29yQyArIGdob3N0U2l6ZSk7CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIGlzR2hvc3QgPSAoYyA9PSBjdXJzb3JDICYmIHIgPj0gY3Vyc29yUiAmJiByIDwgY3Vyc29yUiArIGdob3N0U2l6ZSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIGNlbGxzW3JdW2NdLmRyYXcod2luZG93LCB4LCB5LCBDRUxMX1NJWkUsIHNob3dTaGlwcywgaXNDdXJzb3IsIGlzR2hvc3QsIGdob3N0VmFsaWQpOwogICAgICAgIH0KICAgIH0KfQoKdm9pZCBCb2FyZDo6ZHJhd0dyaWQoc2Y6OlJlbmRlcldpbmRvdyYgd2luZG93LCBzZjpGb250JiBmb250KSB7CiAgICBzZjo6UmVjdGFuZ2xlU2hhcGUgYm9yZGVyOwogICAgYm9yZGVyLnNldFNpemUoc2Y6OlZlY3RvcjJmKEJPQVJEX1BJWEVMUyArIDQwLCBCT0FSRF9QSVhFTFMgKyA0MCkpOwogICAgYm9yZGVyLnNldFBvc2l0aW9uKG9mZnNldFggKyA4LCBvZmZzZXRZICsgOCk7CiAgICBib3JkZXIuc2V0RmlsbENvbG9yKHNmOjpDb2xvcjo6VHJhbnNwYXJlbnQpOwogICAgYm9yZGVyLnNldE91dGxpbmVDb2xvcihHUklEX0xJTkUpOwogICAgYm9yZGVyLnNldE91dGxpbmVUaGlja25lc3MoMik7CiAgICB3aW5kb3cuZHJhdyhib3JkZXIpOwogICAgCiAgICBmb3IgKGludCBjID0gMDsgYyA8IEJPQVJEX1NJWkU7IGMrKykgewogICAgICAgIHNmOjpUZXh0IHRleHQoc3RkOjp0b19zdHJpbmcoYyArIDEpLCBmb250LCAxMyk7CiAgICAgICAgdGV4dC5zZXRGaWxsQ29sb3IoVEVYVF9HT0xEKTsKICAgICAgICBmbG9hdCB4ID0gb2Zmc2V0WCArIDMwICsgYyAqIChDRUxMX1NJWkUgKyBDRUxMX01BUkdJTikgKyBDRUxMX1NJWkUgLyAyIC0gNTsKICAgICAgICB0ZXh0LnNldFBvc2l0aW9uKHgsIG9mZnNldFkgKyAxMCk7CiAgICAgICAgd2luZG93LmRyYXcodGV4dCk7CiAgICB9CiAgICAKICAgIGZvciAoaW50IHIgPSAwOyByIDwgQk9BUkRfU0laRTsgcisrKSB7CiAgICAgICAgc2Y6OlRleHQgdGV4dChzdGQ6OnN0cmluZygxLCAnQScgKyByKSwgZm9udCwgMTMpOwogICAgICAgIHRleHQuc2V0RmlsbENvbG9yKFRFWFRfR09MRCk7CiAgICAgICAgdGV4dC5zZXRQb3NpdGlvbihvZmZzZXRYICsgMTIsIG9mZnNldFkgKyAzNSArIHIgKiAoQ0VMTF9TSVpFICsgQ0VMTF9NQVJHSU4pICsgQ0VMTF9TSVpFIC8gMiAtIDgpOwogICAgICAgIHdpbmRvdy5kcmF3KHRleHQpOwogICAgfQp9Cg==
+// ============================================================================
+// Board.cpp - Реализация игрового поля
+// ============================================================================
+
+#include "Board.hpp"
+#include <algorithm>
+#include <cstdlib>
+
+using namespace Colors;
+
+Board::Board(float ox, float oy, bool enemy)
+    : offsetX(ox), offsetY(oy), isEnemy(enemy) {
+    clear();
+}
+
+void Board::clear() {
+    for (int r = 0; r < BOARD_SIZE; r++)
+        for (int c = 0; c < BOARD_SIZE; c++)
+            cells[r][c].setState(CellState::Empty);
+    ships.clear();
+}
+
+bool Board::inBounds(int r, int c) const {
+    return r >= 0 && r < BOARD_SIZE && c >= 0 && c < BOARD_SIZE;
+}
+
+bool Board::canPlaceShip(int r, int c, int size, bool horizontal) const {
+    if (horizontal) { if (c + size > BOARD_SIZE) return false; }
+    else            { if (r + size > BOARD_SIZE) return false; }
+    
+    int minR = std::max(0, r - 1);
+    int maxR = std::min(BOARD_SIZE - 1, (horizontal ? r : r + size - 1) + 1);
+    int minC = std::max(0, c - 1);
+    int maxC = std::min(BOARD_SIZE - 1, (horizontal ? c + size - 1 : c) + 1);
+    
+    for (int rr = minR; rr <= maxR; rr++)
+        for (int cc = minC; cc <= maxC; cc++)
+            if (cells[rr][cc].getState() == CellState::Ship) return false;
+    
+    return true;
+}
+
+bool Board::placeShip(int r, int c, int size, bool horizontal) {
+    if (!canPlaceShip(r, c, size, horizontal)) return false;
+    
+    auto ship = std::make_unique<Ship>(r, c, size, horizontal);
+    
+    for (int i = 0; i < size; i++) {
+        int rr = horizontal ? r : r + i;
+        int cc = horizontal ? c + i : c;
+        cells[rr][cc].setState(CellState::Ship);
+    }
+    
+    ships.push_back(std::move(ship));
+    return true;
+}
+
+void Board::autoPlace() {
+    clear();
+    for (int i = 0; i < FLEET_COUNT; i++) {
+        int size = FLEET_SIZES[i];
+        bool placed = false;
+        int attempts = 0;
+        while (!placed && attempts < 1000) {
+            int r = rand() % BOARD_SIZE;
+            int c = rand() % BOARD_SIZE;
+            bool horiz = rand() % 2;
+            placed = placeShip(r, c, size, horiz);
+            attempts++;
+        }
+    }
+}
+
+bool Board::shoot(int r, int c) {
+    if (!inBounds(r, c)) return false;
+    
+    CellState s = cells[r][c].getState();
+    if (s == CellState::Hit || s == CellState::Miss) return false;
+    
+    if (s == CellState::Ship) {
+        cells[r][c].setState(CellState::Hit);
+        for (auto& ship : ships) {
+            if (ship->hunches(r, c)) {
+                break;
+            }
+        }
+        return true;
+    } else {
+        cells[r][c].setState(CellState::Miss);
+        return false;
+    }
+}
+
+bool Board::allShipsSunk() const {
+    if (ships.empty()) return false;
+    for (const auto& ship : ships) {
+        if (!ship->isSunk()) return false;
+    }
+    return true;
+}
+
+bool Board::hasShipAt(int r, int c) const {
+    return inBounds(r, c) && cells[r][c].getState() == CellState::Ship;
+}
+
+int Board::getShipsAlive() const {
+    int count = 0;
+    for (const auto& ship : ships) {
+        if (!ship->isSunk()) count++;
+    }
+    return count;
+}
+
+CellState Board::getCellState(int r, int c) const {
+    return inBounds(r, c) ? cells[r][c].getState() : CellState::Empty;
+}
+
+void Board::setCellState(int r, int c, CellState s) {
+    if (inBounds(r, c)) cells[r][c].setState(s);
+}
+
+void Board::draw(sf::RenderWindow& window, sf::Font& font,
+                 int cursorR, int cursorC, bool showShips,
+                 int ghostSize, bool ghostDir, bool ghostValid) {
+    drawGrid(window, font);
+    
+    for (int r = 0; r < BOARD_SIZE; r++) {
+        for (int c = 0; c < BOARD_SIZE; c++) {
+            float x = offsetX + 30 + c * (CELL_SIZE + CELL_MARGIN);
+            float y = offsetY + 30 + r * (CELL_SIZE + CELL_MARGIN);
+            
+            bool isCursor = (r == cursorR && c == cursorC);
+            bool isGhost = false;
+            
+            if (ghostSize > 0 && cursorR >= 0 && cursorC >= 0) {
+                if (ghostDir) {
+                    isGhost = (r == cursorR && c >= cursorC && c < cursorC + ghostSize);
+                } else {
+                    isGhost = (c == cursorC && r >= cursorR && r < cursorR + ghostSize);
+                }
+            }
+            
+            cells[r][c].draw(window, x, y, CELL_SIZE, showShips, isCursor);
+            
+            if (isGhost) {
+                sf::RectangleShape ghost;
+                ghost.setSize(sf::Vector2f(CELL_SIZE, CELL_SIZE));
+                ghost.setPosition(x, y);
+                ghost.setFillColor(ghostValid ? GHOST_OK : GHOST_BAD);
+                window.draw(ghost);
+            }
+        }
+    }
+    
+    for (const auto& ship : ships) {
+        ship->draw(window, offsetX + 30, offsetY + 30, CELL_SIZE, showShips, isEnemy);
+    }
+}
+
+void Board::drawGrid(sf::RenderWindow& window, sf::Font& font) {
+    sf::RectangleShape border;
+    border.setSize(sf::Vector2f(BOARD_PIXELS + 40, BOARD_PIXELS + 40));
+    border.setPosition(offsetX + 8, offsetY + 8);
+    border.setFillColor(sf::Color::Transparent);
+    border.setOutlineColor(GRID_LINE);
+    border.setOutlineThickness(2);
+    window.draw(border);
+    
+    for (int c = 0; c < BOARD_SIZE; c++) {
+        sf::Text text(std::to_string(c + 1), font, 13);
+        text.setFillColor(TEXT_GOLD);
+        float x = offsetX + 30 + c * (CELL_SIZE + CELL_MARGIN) + CELL_SIZE / 2 - 5;
+        text.setPosition(x, offsetY + 10);
+        window.draw(text);
+    }
+    
+    for (int r = 0; r < BOARD_SIZE; r++) {
+        sf::Text text(std::string(1, 'A' + r), font, 13);
+        text.setFillColor(TEXT_GOLD);
+        text.setPosition(offsetX + 12, offsetY + 35 + r * (CELL_SIZE + CELL_MARGIN) + CELL_SIZE / 2 - 8);
+        window.draw(text);
+    }
+}

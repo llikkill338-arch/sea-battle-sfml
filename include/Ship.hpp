@@ -1,1 +1,37 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIFNoaXAuaHBwIC0g0JrQvtGC0L7RgNGL0Lkg0LrQvtC80LzQtdC90YLQsAovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCnByYWdtYSBvbmNlCiNpbmNsdWRlIDx2ZWN0b3I+CgplbnVtIGNsYXNzIFBhcnRTdGF0ZSB7CiAgICBJbnRhY3QsCiAgICBEYW1hZ2VkCn07CgpzdHJ1Y3QgU2hpcFBhcnQgewogICAgaW50IHIsIGM7CiAgICBQYXJ0U3RhdGUgc3RhdGU7Cn07CgpjbGFzcyBTaGlwIHsKcHVibGljOgogICAgU2hpcChpbnQgc3RhcnRSLCBpbnQgc3RhcnRDLCBpbnQgc2l6ZSwgYm9vbCBob3Jpem9udGFsKTsKICAgIAogICAgICAgIGJvb2wgaHVuY2hlcyhpbnQgciwgaW50IGMpIGNvbnN0OwogICAgICAgIGJvb2wgaXNTdW5rKCkgY29uc3Q7CiAgICAgICAgaW50IGdldFNpemUoKSBjb25zdCB7IHJldHVybiBzaXplOyB9CiAgICAgICAgYm9vbCBpc0hvcml6b250YWwoKSBjb25zdCB7IHJldHVybiBob3Jpem9udGFsOyB9CiAgICAgICAgY29uc3QgU2hpcFBhcnQmIGdldFBhcnQoaW50IGlkeCkgY29uc3Q7CiAgICAgICAgCiAgICAgICAgdm9pZCBkcmF3KHNmOjpSZW5kZXJXaW5kb3cmIHdpbmRvdywgZmxvYXQgb2Zmc2V0WCwgZmxvYXQgb2Zmc2V0WSwgCiAgICAgICAgICAgICAgICAgIGZsb2F0IGNlbGxTaXplLCBib29sIHNob3dTaGlwcywgYm9vbCBpc0VuZW15KSBjb25zdDsKCnByaXZhdGU6CiAgICBTdGRcOjpWZWN0b3I8U2hpcFBhcnQ+IHBhcnRzOwogICAgaW50IHNpemU7CiAgICBib29sIGhvcml6b250YWw7Cn07Cg==
+// ============================================================================
+// Ship.hpp - Корабль
+// ============================================================================
+
+#pragma once
+#include <vector>
+#include <SFML/Graphics.hpp>
+#include "Constants.hpp"
+
+enum class PartState {
+    Intact,
+    Damaged
+};
+
+struct ShipPart {
+    int r, c;
+    PartState state;
+};
+
+class Ship {
+public:
+    Ship(int startR, int startC, int size, bool horizontal);
+    
+    bool hunches(int r, int c) const;
+    bool isSunk() const;
+    int getSize() const { return size; }
+    bool isHorizontal() const { return horizontal; }
+    const ShipPart& getPart(int idx) const;
+    
+    void draw(sf::RenderWindow& window, float offsetX, float offsetY, 
+              float cellSize, bool showShips, bool isEnemy) const;
+
+private:
+    std::vector<ShipPart> parts;
+    int size;
+    bool horizontal;
+};

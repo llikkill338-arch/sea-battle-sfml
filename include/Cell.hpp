@@ -1,1 +1,30 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIENlbGwuaHBwIC0g0JrQvtC70L7QvCDQsiDQutC+0LzQvNC10L3RgtCwCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCnByYWdtYSBvbmNlCiNpbmNsdWRlIDxTRk1ML0dyYXBoaWNzLmhwcD4KCmVudW0gY2xhc3MgQ2VsbFN0YXRlIHsKICAgIEVtcHR5LCAgICAgIC8vINCd0LUg0L/QvtC00LDRgNGC0LjQstC90L7RgdGC0Ywg0LLQuNGCCiAgICBTaGlwLCAgICAgIC8vINCe0L/QtdGAINGC0LXRgNC10L3RgtC4INC60L7QvNC80LXQvdGC0LAKICAgIEhpdCwgICAgICAgLy8g0J/QvtGC0YLQsNC90L7QstC70LXQvdC40LUg0LrQvtC80LzQtdC90YLQsAogICAgTWlzcywgICAgICAvLyDQn9C+0YLQvtGA0LAg0L/QvtGC0YLQsNC90L7QstC70LXQvdC40LUKfTsKCmNsYXNzIENlbGwgewpwdWJsaWM6CiAgICBDZWxsKCk7CiAgICAKICAgIENlbGxTdGF0ZSBnZXRTdGF0ZSgpIGNvbnN0OwogICAgdm9pZCBzZXRTdGF0ZShDZWxsU3RhdGUgcyk7CiAgICB2b2lkIHNldEhvdmVyKGJvb2wgaCk7CiAgICBib29sIGlzSG92ZXJlZCgpIGNvbnN0OwogICAgCiAgICB2b2lkIGRyYXcoc2Y6OlJlbmRlcldpbmRvdyYgd2luZG93LCBmbG9hdCB4LCBmbG9hdCB5LCBmbG9hdCBzaXplLAogICAgICAgICAgICAgIGJvb2wgc2hvd1NoaXAsIGJvb2wgaXNDdXJzb3IpOwoKcHJpdmF0ZToKICAgIENlbGxTdGF0ZSBzdGF0ZTsKICAgIGJvb2wgaG92ZXI7Cn07Cg==
+// ============================================================================
+// Cell.hpp - Клетка поля
+// ============================================================================
+
+#pragma once
+#include <SFML/Graphics.hpp>
+
+enum class CellState {
+    Empty,      // Вода
+    Ship,       // Корабль
+    Hit,        // Попадание
+    Miss        // Промах
+};
+
+class Cell {
+public:
+    Cell();
+    
+    CellState getState() const;
+    void setState(CellState s);
+    void setHover(bool h);
+    bool isHovered() const;
+    
+    void draw(sf::RenderWindow& window, float x, float y, float size,
+              bool showShip, bool isCursor);
+
+private:
+    CellState state;
+    bool hover;
+};

@@ -1,1 +1,48 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIEJvYXJkLmhwcCAtINCY0LLQtdGA0LzQtdC90YLQsCDQtNCwIDEweDEwCi8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCnByYWdtYSBvbmNlCiNpbmNsdWRlIDxTRk1ML0dyYXBoaWNzLmhwcD4KI2luY2x1ZGUgPHZlY3Rvcj4KI2luY2x1ZGUgPG1lbW9yeT4KI2luY2x1ZGUgIkNlbGwuaHBwIgojaW5jbHVkZSAiU2hpcC5ocHAiCgpjbGFzcyBCb2FyZCB7CnB1YmxpYzoKICAgIEJvYXJkKGZsb2F0IG9mZnNldFgsIGZsb2F0IG9mZnNldFksIGJvb2wgaXNFbmVteSk7CiAgICAKICAgIC8vINCg0LDRgtC+0YDQuNGC0LXQudGC0LDQvdC40LUg0LrQvtC80LzQtdC90YLQsAogICAgYm9vbCBjYW5QbGFjZVNoaXAoaW50IHIwIGludCBjLCBpbnQgc2l6ZSwgYm9vbCBob3Jpem9udGFsKSBjb25zdDsKICAgIGJvb2wgcGxhY2VTaGlwKGludCByLCBpbnQgYywgaW50IHNpemUsIGJvb2wgaG9yaXpvbnRhbCk7CiAgICB2b2lkIGF1dG9QbGFjZSgpOwogICAgdm9pZCBjbGVhcigpOwogICAgCiAgICAvLyINCNC60YLRgtCwCiAgICBib29sIHNob290KGludCByLCBpbnQgYyk7IC8vIHRydWUgPSDQv9C+0YLRgtCw0L3QvtCy0LvQtdC90LjQtQogICAgYm9vbCBhbGxTaGlwc1N1bmsoKSBjb25zdDsKICAgIGJvb2wgaGFzU2hpcEF0KGludCByLCBpbnQgYykgY29uc3Q7CiAgICAKICAgIC8vINCe0YDQs9Cw0L3QvdGL0YUg0YEg0L7QvdC70LDQudC90L7Qs9C+INGC0L7Qu9C+0LHQuqAKICAgIHZvaWQgZHJhdyhzZjo6UmVuZGVyV2luZG93JiB3aW5kb3csIHNmOjpGb250JiBmb250LAogICAgICAgICAgICBpbnQgY3Vyc29yUiwgaW50IGN1cnNvckMsIGJvb2wgc2hvd1NoaXBzLAogICAgICAgICAgICBpbnQgZ2hvc3RTaXplLCBib29sIGdob3N0RGlyLCBib29sIGdob3N0VmFsaWQpOwogICAgCiAgICAvLyDQmNC30LHQtdC5CiAgICBpbnQgZ2V0U2hpcHNBbGl2ZSgpIGNvbnN0OwogICAgQ2VsbFN0YXRlIGdldENlbGxTdGF0ZShpbnQgciwgaW50IGMpIGNvbnN0OwogICAgdm9pZCBzZXRDZWxsU3RhdGUoaW50IHIwIGludCBjLCBDZWxsU3RhdGUgcyk7CiAgICAKICAgIGZsb2F0IGdldE9mZnNldFgoKSBjb25zdCB7IHJldHVybiBvZmZzZXRYOyB9CiAgICBmbG9hdCBnZXRPZmZzZXRZKCkgY29uc3QgeyByZXR1cm4gb2Zmc2V0WTsgfQoKcHJpdmF0ZToKICAgIENlbGwgY2VsbHNbQk9BUkRfU0laRV1bQk9BUkRfU0laRV07CiAgICBTdGRcOjpWZWN0b3I8U3RkXDpVbmlxX3B0cjxTaGlwPj4gc2hpcHM7CiAgICBmbG9hdCBvZmZzZXRYLCBvZmZzZXRZOwogICAgYm9vbCBpc0VuZW15OwogICAgCiAgICBib29sIGluQm91bmRzKGludCByLCBpbnQgYykgY29uc3Q7CiAgICB2b2lkIGRyYXdHcmlkKHNmOjpSZW5kZXJXaW5kb3cmIHdpbmRvdywgc2Y6OkZvbnQmIGZvbnQpOwp9Owo=
+// ============================================================================
+// Board.hpp - Игровое поле 10x10
+// ============================================================================
+
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <vector>
+#include <memory>
+#include "Cell.hpp"
+#include "Ship.hpp"
+
+class Board {
+public:
+    Board(float offsetX, float offsetY, bool isEnemy);
+    
+    // Расстановка
+    bool canPlaceShip(int r, int c, int size, bool horizontal) const;
+    bool placeShip(int r, int c, int size, bool horizontal);
+    void autoPlace();
+    void clear();
+    
+    // Бой
+    bool shoot(int r, int c);
+    bool allShipsSunk() const;
+    bool hasShipAt(int r, int c) const;
+    
+    // Отрисовка
+    void draw(sf::RenderWindow& window, sf::Font& font,
+              int cursorR, int cursorC, bool showShips,
+              int ghostSize, bool ghostDir, bool ghostValid);
+    
+    // Инфо
+    int getShipsAlive() const;
+    CellState getCellState(int r, int c) const;
+    void setCellState(int r, int c, CellState s);
+    
+    float getOffsetX() const { return offsetX; }
+    float getOffsetY() const { return offsetY; }
+
+private:
+    Cell cells[BOARD_SIZE][BOARD_SIZE];
+    std::vector<std::unique_ptr<Ship>> ships;
+    float offsetX, offsetY;
+    bool isEnemy;
+    
+    bool inBounds(int r, int c) const;
+    void drawGrid(sf::RenderWindow& window, sf::Font& font);
+};

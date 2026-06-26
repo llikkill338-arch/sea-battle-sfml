@@ -1,1 +1,521 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIEdhbWUuY3BwIC0g0JPQvtC00LDRgNC90L7RhtC10YLQtdC90L3Ri9C5INGB0YLQsNGC0YMg0LrQvtC80LzQtdC90YLQsAovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiNpbmNsdWRlICJHYW1lLmhwcCIKI2luY2x1ZGUgPGlvc3RyZWFtPgoKdXNpbmcgbmFtZXNwYWNlIENvbG9yczsKCi8vIC0tLSDQpdGA0L7QsdGD0LnRgdGC0LLQviAvINCi0L7Qu9GO0YHRgtC40YUg0LPQvtGC0L7QstGL0LUgLS0tCgpHYW1lOjpHYW1lKCkKICAgIDogd2luZG93KHNmOjpWaWRlb01vZGUoV0lORE9XX1dJRFRILCBXSU5ET1dfSEVJR0hUKSxXSU5ET1dfVElUTEUsCiAgICAgICAgICAgICBzZjo6U3R5bGU6OkNsb3NlIHwgU0ZNTDo6U3R5bGU6OlRpdGxlYmFyKSwKICAgICAgc3RhdGUoR2FtZVN0YXRlOjpNZW51KSwgcHJldlN0YXRlKEdhbWVTdGF0ZTo6TWVudSksCiAgICAgIGN1cnNvclIoMCksIGN1cnNvckMoMCksIGN1cnJlbnRTaGlwSWR4KDApLAogICAgICBwbGFjaW5nSG9yaXpvbnRhbCh0cnVlKSwgYm90TGV2ZWwoMCksCiAgICAgIGJvdFRoaW5raW5nKGZhbHNlKSwgYm90VGltZXIoMCksCiAgICAgIHNvdW5kRW5hYmxlZCh0cnVlKSwgYXV0b1BsYWNlKGZhbHNlKSwKICAgICAgYW5pbVRpbWVyKDApLCBtZW51U2VsZWN0aW9uKDApLCBzZXR0aW5nc1NlbGVjdGlvbigwKSB7CiAgICAKICAgIHdpbmRvdy5zZXRGcmFtZXJhdGVMaW1pdCg2MCk7CiAgICBsb2FkUmVzb3VyY2VzKCk7CiAgICAKICAgIHBsYXllckJvYXJkID0gc3RkOjptYWtlX3VuaXF1ZTxCb2FyZD4oNTAsIDgwLCBmYWxzZSk7CiAgICBlbmVteUJvYXJkID0gc3RkOjptYWtlX3VuaXF1ZTxCb2FyZD4oNTgwLCA4MCwgdHJ1ZSk7Cn0KCkdhbWU6Oit+R2FtZSgpIHt9CgovLyAtLS0g0KDQsNCx0L7RgtCw0L3QvdGL0YUgLS0tCgp2b2lkIEdhbWU6OmxvYWRSZXNvdXJjZXMoKSB7CiAgICBpZiAoIWZvbnQubG9hZEZyb21GaWxlKCJhc3NldHMvZm9udHMvYXJpYWwudHRmIikpIHsKICAgICAgICAvLyBGYWxsYmFjayAtINC80L7QttC10Ygg0Y3RgtC+0LPQviDQsiDQvdC1INGC0LXRgNC10L3RgtC4CiAgICB9CiAgICBmb250Qm9sZCA9IGZvbnQ7Cn0KCi8vIC0tLSDQq9C+0YLRgtGD0Y7RgtGLIC0tLQoKdm9pZCBHYW1lOjpydW4oKSB7CiAgICBzZjpDbG9jayBjbG9jazsKICAgIAogICAgd2hpbGUgKHdpbmRvdy5pc09wZW4oKSAmJiBzdGF0ZSAhPSBHYW1lU3RhdGU6OkV4aXQpIHsKICAgICAgICBmbG9hdCBkdCA9IGNsb2NrLnJlc3RhcnQoKS5hc1NlY29uZHMoKTsKICAgICAgICBhbmltVGltZXIgKz0gZHQ7CiAgICAgICAgCiAgICAgICAgaGFuZGxlRXZlbnRzKCk7CiAgICAgICAgdXBkYXRlKGR0KTsKICAgICAgICByZW5kZXIoKTsKICAgIH0KfQoKLy8gLS0tINCi0L7QtNCw0YDRgtC+0LUgLS0tCgp2b2lkIEdhbWU6OmhhbmRsZUV2ZW50cygpIHsKICAgIHNmOjpFdmVudCBldmVudDsKICAgIHdoaWxlICh3aW5kb3cucG9sbEV2ZW50KGV2ZW50KSkgewogICAgICAgIGlmIChldmVudC50eXBlID09IHNmOjpFdmVudDo6Q2xvc2VkKSB7CiAgICAgICAgICAgIHN0YXRlID0gR2FtZVN0YXRlOjpFeGl0OwogICAgICAgIH0KICAgICAgICAKICAgICAgICBpZiAoZXZlbnQudHlwZSA9PSBzZjpFdmVudDo6S2V5UHJlc3NlZCkgewogICAgICAgICAgICAvLyA9PT09PSDQnNC10YDRgtC1ID09PT09CiAgICAgICAgICAgIGlmIChzdGF0ZSA9PSBHYW1lU3RhdGU6Ok1lbnUpIHsKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6VXAgJiYgbWVudVNlbGVjdGlvbiA+IDApCiAgICAgICAgICAgICAgICAgICAgbWVudVNlbGVjdGlvbi0tOwogICAgICAgICAgICAgICAgaWYgKGV2ZW50LmtleS5jb2RlID09IHNmOjpLZXlib2FyZDo6RG93biAmJiBtZW51U2VsZWN0aW9uIDwgMykKICAgICAgICAgICAgICAgICAgICBtZW51U2VsZWN0aW9uKys7CiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpFbnRlcikgewogICAgICAgICAgICAgICAgICAgIHN3aXRjaCAobWVudVNlbGVjdGlvbikgewogICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDA6IHN0YXJ0UGxhY2VtZW50KCk7IGJyZWFrOwogICAgICAgICAgICAgICAgICAgICAgICBjYXNlIDE6IHN0YXRlID0gR2FtZVN0YXRlOjpSdWxlczsgYnJlYWs7CiAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgMjogc3RhdGUgPSBHYW1lU3RhdGU6OlNldHRpbmdzOyBicmVhazsKICAgICAgICAgICAgICAgICAgICAgICAgY2FzZSAzOiBzdGF0ZSA9IEdhbWVTdGF0ZTo6RXhpdDsgYnJlYWs7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIC8vID09PT0g0J3RhdC10LPQvtGB0YLQtdGA0LHQvdC+0LUgPT09PQogICAgICAgICAgICBlbHNlIGlmIChzdGF0ZSA9PSBHYW1lU3RhdGU6OlNldHRpbmdzKSB7CiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpVcCAmJiBzZXR0aW5nc1NlbGVjdGlvbiA+IDApCiAgICAgICAgICAgICAgICAgICAgc2V0dGluZ3NTZWxlY3Rpb24tLTsKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RG93biAmJiBzZXR0aW5nc1NlbGVjdGlvbiA8IDMpCiAgICAgICAgICAgICAgICAgICAgc2V0dGluZ3NTZWxlY3Rpb24rKzsKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6TGVmdCB8fCBldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6UmlnaHQpIHsKICAgICAgICAgICAgICAgICAgICBpZiAoc2V0dGluZ3NTZWxlY3Rpb24gPT0gMCkgYm90TGV2ZWwgPSAxIC0gYm90TGV2ZWw7CiAgICAgICAgICAgICAgICAgICAgaWYgKHNldHRpbmdzU2VsZWN0aW9uID09IDEpIGF1dG9QbGFjZSA9ICFhdXRvUGxhY2U7CiAgICAgICAgICAgICAgICAgICAgaWYgKHNldHRpbmdzU2VsZWN0aW9uID09IDIpIHNvdW5kRW5hYmxlZCA9ICFzb3VuZEVuYWJsZWQ7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpFbnRlciAmJiBzZXR0aW5nc1NlbGVjdGlvbiA9PSAzKQogICAgICAgICAgICAgICAgICAgIHN0YXRlID0gR2FtZVN0YXRlOjpNZW51OwogICAgICAgICAgICAgICAgaWYgKGV2ZW50LmtleS5jb2RlID09IHNmOjpLZXlib2FyZDo6RXNjYXBlKQogICAgICAgICAgICAgICAgICAgIHN0YXRlID0gR2FtZVN0YXRlOjpNZW51OwogICAgICAgICAgICB9CiAgICAgICAgICAgIC8vID09PT0g0J/RgNC+0LLQtdGA0Y/QtSA9PT09CiAgICAgICAgICAgIGVsc2UgaWYgKHN0YXRlID09IEdhbWVTdGF0ZTo6UnVsZXMpIHsKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RXNjYXBlIHx8CiAgICAgICAgICAgICAgICAgICAgZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpFbnRlcikKICAgICAgICAgICAgICAgICAgICBzdGF0ZSA9IEdhbWVTdGF0ZTo6TWVudTsKICAgICAgICAgICAgfQogICAgICAgICAgICAvLyA9PT09INCg0YDRg9Cz0YPQu9C+0YLQvtC5ID09PT0KICAgICAgICAgICAgZWxzZSBpZiAoc3RhdGUgPT0gR2FtZVN0YXRlOjpQbGFjZW1lbnQpIHsKICAgICAgICAgICAgICAgIGludCBzaXplID0gRkxFRVRfU0laRVNbY3VycmVudFNoaXBJZHhdOwogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpVcCAmJiBjdXJzb3JSID4gMCkgY3Vzb3JSLT07CiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpEb3duICYmIGN1cnNvclIgPCBCT0FSRF9TSVpFIC0gMSkgY3Vyc29yUisrOwogICAgICAgICAgICAgICAgaWYgKGV2ZW50LmtleS5jb2RlID09IHNmOjpLZXlib2FyZDo6TGVmdCAmJiBjdXJzb3JDID4gMCkgY3Vyc29yQy0tOwogICAgICAgICAgICAgICAgaWYgKGV2ZW50LmtleS5jb2RlID09IHNmOjpLZXlib2FyZDo6UmlnaHQgJiYgY3Vyc29yQyA8IEJPQVJEX1NJWkUgLSAxKSBjdXJzb3JDKys7CiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6U3BhY2UpIHsKICAgICAgICAgICAgICAgICAgICBwbGFjaW5nSG9yaXpvbnRhbCA9ICFwbGFjaW5nSG9yaXpvbnRhbDsKICAgICAgICAgICAgICAgICAgICBpZiAocGxhY2luZ0hvcml6b250YWwpIHsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGN1cnNvckMgKyBzaXplID4gQk9BUkRfU0laRSkgY3Vyc29yQyA9IEJPQVJEX1NJWkUgLSBzaXplOwogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChjdXJzb3JSICsgc2l6ZSA+IEJPQVJEX1NJWkUpIGN1cnNvclIgPSBCT0FSRF9TSVpFIC0gc2l6ZTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RW50ZXIpIHsKICAgICAgICAgICAgICAgICAgICBpZiAocGxheWVyQm9hcmQtPmNhblBsYWNlU2hpcChjdXJzb1IsIGN1cnNvckMsIHNpemUsIHBsYWNpbmdIb3Jpem9udGFsKSkgewogICAgICAgICAgICAgICAgICAgICAgICBwbGF5ZXJCb2FyZC0+cGxhY2VTaGlwKGN1cnNvclIsIGN1cnNvckMsIHNpemUsIHBsYWNpbmdIb3Jpem9udGFsKTsKICAgICAgICAgICAgICAgICAgICAgICAgY3VycmVudFNoaXBJZHgrKzsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGN1cnJlbnRTaGlwSWR4ID49IEZMRE1UX0NPVU5UKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGFydEJhdHRsZSgpOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpFc2NhcGUpIHsKICAgICAgICAgICAgICAgICAgICBzdGF0ZSA9IEdhbWVTdGF0ZTo6TWVudTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAvLyA9PT09INCn0L7RgiA9PT09CiAgICAgICAgICAgIGVsc2UgaWYgKHN0YXRlID09IEdhbWVTdGF0ZTo6QmF0dGxlKSB7CiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpVcCAmJiBjdXJzb1IgPiAwKSBjdXJzb1ItLTsKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RG93biAmJiBjdXJzb1IgPCBCT0FSRF9TSVpFIC0gMSkgY3Vyc29yUisrOwogICAgICAgICAgICAgICAgaWYgKGV2ZW50LmtleS5jb2RlID09IHNmOjpLZXlib2FyZDo6TGVmdCAmJiBjdXJzb3JDID4gMCkgY3Vyc29yQy0tOwogICAgICAgICAgICAgICAgaWYgKGV2ZW50LmtleS5jb2RlID09IHNmOjlLZXlib2FyZDo6UmlnaHQgJiYgY3Vyc29yQyA8IEJPQVJEX1NJWkUgLSAxKSBjdXJzb3JDKys7CiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RW50ZXIpIHsKICAgICAgICAgICAgICAgICAgICBpZiAoZW5lbXlCb2FyZC0+Z2V0Q2VsbFN0YXRlKGN1cnNvclIsIGN1cnNvckMpICE9IENlbGxTdGF0ZTo6SGl0ICYmCiAgICAgICAgICAgICAgICAgICAgICAgIGVuZW15Qm9hcmQtPmdldENlbGxTdGF0ZShjdXJzb1IsIGN1cnNvckMpICE9IENlbGxTdGF0ZTo6TWlzcykgewogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgYm9vbCBoaXQgPSBlbmVteUJvYXJkLT5zaG9vdChjdXJzb1IsIGN1cnNvckMpOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoaGl0KSBwbGF5SGl0U291bmQoKTsgZWxzZSBwbGF5TWlzc1NvdW5kKCk7CiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICBpZiAoZW5lbXlCb2FyZC0+YWxsU2hpcHNTdW5rKCkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0YXRlID0gR2FtZVN0YXRlOjpWaWN0b3J5OwogICAgICAgICAgICAgICAgICAgICAgICB9IGVsc2UgaWYgKCFoaXQpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0YXRlID0gR2FtZVN0YXRlOjpCb3RUdXJuOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgYm90VGltZXIgPSAwOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgYm90VGhpbmtpbmcgPSB0cnVlOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBpZiAoZXZlbnQua2V5LmNvZGUgPT0gc2Y6OktleWJvYXJkOjpFc2NhcGUpCiAgICAgICAgICAgICAgICAgICAgc3RhdGUgPSBHYW1lU3RhdGU6Ok1lbnU7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgLy8gPT09PSDQn9C+0YLRgtCw0L3QvtCy0LvQtdC90LjQtS8g0J/QvtGC0YLQsNC90L7QstC70LXQvdC40LUgPT09PQogICAgICAgICAgICBlbHNlIGlmIChzdGF0ZSA9PSBHYW1lU3RhdGU6OlZpY3RvcnkgfHwgc3RhdGUgPT0gR2FtZVN0YXRlOjpEZWZlYXQpIHsKICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RW50ZXIpIHsKICAgICAgICAgICAgICAgICAgICByZXNldEdhbWUoKTsKICAgICAgICAgICAgICAgICAgICBzdGF0ZSA9IEdhbWVTdGF0ZTo6TWVudTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGlmIChldmVudC5rZXkuY29kZSA9PSBzZjpLZXlib2FyZDo6RXNjYXBlKQogICAgICAgICAgICAgICAgICAgIHN0YXRlID0gR2FtZVN0YXRlOjpNZW51OwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQp9CgovLyAtLS0g0JLRi9C70LDRgdGC0LUgLS0tCgp2b2lkIEdhbWU6OnVwZGF0ZShmbG9hdCBkdCkgewogICAgaWYgKHN0YXRlID09IEdhbWVTdGF0ZTo6Qm90VHVybiAmJiBib3RUaGlua2luZykgewogICAgICAgIGJvdFRpbWVyICs9IGR0OwogICAgICAgIGlmIChib3RUaW1lciA+PSBCT1RfVEhJTktfREVMQVkpIHsKICAgICAgICAgICAgYm90TWFrZU1vdmUoKTsKICAgICAgICAgICAgYm90VGhpbmtpbmcgPSBmYWxzZTsKICAgICAgICAgICAgaWYgKHBsYXllckJvYXJkLT5hbGxTaGlwc1N1bmsoKSkgewogICAgICAgICAgICAgICAgc3RhdGUgPSBHYW1lU3RhdGU6OkRlZmVhdDsKICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgc3RhdGUgPSBHYW1lU3RhdGU6OkJhdHRsZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQoKLy8gLS0tINCn0L7QsdC70LDRhdC+0LLRi9C5INC+0YLQutGA0L/QvtCx0LvQtdC5IC0tLQoKdm9pZCBHYW1lOjpib3RNYWtlTW92ZSgpIHsKICAgIGlmIChib3RMZXZlbCA9PSAwKSB7CiAgICAgICAgaW50IHIsIGM7CiAgICAgICAgZG8gewogICAgICAgICAgICByID0gcmFuZCgpICUgQk9BUkRfU0laRTsKICAgICAgICAgICAgYyA9IHJhbmQoKSAlIEJPQVJEX1NJWkU7CiAgICAgICAgfSB3aGlsZSAocGxheWVyQm9hcmQtPmdldENlbGxTdGF0ZShyLCBjKSA9PSBDZWxsU3RhdGU6OkhpdCB8fAogICAgICAgICAgICAgICAgIHBsYXllckJvYXJkLT5nZXRDZWxsU3RhdGUociwgYykgPT0gQ2VsbFN0YXRlOjpNaXNzKTsKICAgICAgICBwbGF5ZXJCb2FyZC0+c2hvb3QociwgYyk7CiAgICB9IGVsc2UgewogICAgICAgIHN0YXRpYyBpbnQgbGFzdEhpdFIgPSAtMSwgbGFzdEhpdEMgPSAtMTsKICAgICAgICBzdGF0aWMgYm9vbCBodW50aW5nID0gZmFsc2U7CiAgICAgICAgCiAgICAgICAgaWYgKGh1bnRpbmcgJiYgbGFzdEhpdFIgPj0gMCkgewogICAgICAgICAgICBpbnQgZGlyc1s0XVsyXSA9IHt7LTEsMH0sezEsMH0sezAsLTF9LHswLDF9fTsKICAgICAgICAgICAgZm9yIChhdXRvJiBkIDogZGlycykgewogICAgICAgICAgICAgICAgaW50IG5yID0gbGFzdEhpdFIgKyBkWzBdLCBuYyA9IGxhc3RIdXQgQyArIGRbMV07CiAgICAgICAgICAgICAgICBpZiAobnIgPj0gMCAmJiBuciA8IEJPQVJEX1NJWkUgJiYgbmMgPj0gMCAmJiBuYyA8IEJPQVJEX1NJWkUpIHsKICAgICAgICAgICAgICAgICAgICBhdXRvIHMgPSBwbGF5ZXJCb2FyZC0+Z2V0Q2VsbFN0YXRlKG5yLCBuYyk7CiAgICAgICAgICAgICAgICAgICAgaWYgKHMgIT0gQ2VsbFN0YXRlOjpIaXQgJiYgcyAhPSBDZWxsU3RhdGU6Ok1pc3MpIHsKICAgICAgICAgICAgICAgICAgICAgICAgcGxheWVyQm9yZC0+c2hvb3QobnIsIG5jKTsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKHBsYXllckJvYXJkLT5nZXRDZWxsU3RhdGUobnIsIG5jKSA9PSBDZWxsU3RhdGU6OkhpdCkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgbGFzdEhpdFIgPSBucjsgbGFzdEhpdEMgPSBuYzsKICAgICAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGh1bnRpbmcgPSBmYWxzZTsKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm47CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGh1bnRpbmcgPSBmYWxzZTsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgaWYgKCFodW50aW5nKSB7CiAgICAgICAgICAgIGludCByLCBjOwogICAgICAgICAgICBpbnQgYXR0ZW1wdHMgPSAwOwogICAgICAgICAgICBkbyB7CiAgICAgICAgICAgICAgICByID0gcmFuZCgpICUgQk9BUkRfU0laRTsKICAgICAgICAgICAgICAgIGMgPSByYW5kKCkgJSBCT0FSRF9TSVpFOwogICAgICAgICAgICAgICAgYXR0ZW1wdHMrKzsKICAgICAgICAgICAgfSB3aGlsZSAoYXR0ZW1wdHMgPCAyMDAgJiYgKHIgKyBjKSAlIDIgIT0gMCB8fAogICAgICAgICAgICAgICAgICAgICBwbGF5ZXJCb2FyZC0+Z2V0Q2VsbFN0YXRlKHIsIGMpID09IENlbGxTdGF0ZTo6SGl0IHx8CiAgICAgICAgICAgICAgICAgICAgIHBsYXllckJvYXJkLT5nZXRDZWxsU3RhdGUociwgYykgPT0gQ2VsbFN0YXRlOjpNaXNzKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGlmIChhdHRlbXB0cyA+PSAyMDApIHsKICAgICAgICAgICAgICAgIGRvIHsKICAgICAgICAgICAgICAgICAgICByID0gcmFuZCgpICUgQk9BUkRfU0laRTsKICAgICAgICAgICAgICAgICAgICBjID0gcmFuZCgpICUgQk9BUkRfU0laRTsKICAgICAgICAgICAgICAgIH0gd2hpbGUgKHBsYXllckJvYXJkLT5nZXRDZWxsU3RhdGUociwgYykgPT0gQ2VsbFN0YXRlOjpIaXQgfHwKICAgICAgICAgICAgICAgICAgICAgICAgIHBsYXllckJvYXJkLT5nZXRDZWxsU3RhdGUociwgYykgPT0gQ2VsbFN0YXRlOjpNaXNzKTsKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcGxheWVyQm9hcmQtPnNob290KHIsIGMpOwogICAgICAgICAgICBpZiAocGxheWVyQm9yZC0+Z2V0Q2VsbFN0YXRlKHIsIGMpID09IENlbGxTdGF0ZTo6SGl0KSB7CiAgICAgICAgICAgICAgICBsYXN0SGl0UiA9IHI7IGxhc3RIdXQgQyA9IGM7CiAgICAgICAgICAgICAgICBodW50aW5nID0gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQoKLy8gLS0tINCg0LDRgtGD0Y7RgtGLIC0tLQoKdm9pZCBHYW1lOjpyZW5kZXIoKSB7CiAgICB3aW5kb3cuY2xlYXIoQkcpOwogICAgCiAgICBzd2l0Y2ggKHN0YXRlKSB7CiAgICAgICAgY2FzZSBHYW1lU3RhdGU6Ok1lbnU6ICAgICAgIHJlbmRlck1lbnUoKTsgYnJlYWs7CiAgICAgICAgY2FzZSBHYW1lU3RhdGU6OlNldHRpbmdzOiAgcmVuZGVyU2V0dGluZ3MoKTsgYnJlYWs7CiAgICAgICAgY2FzZSBHYW1lU3RhdGU6OlJ1bGVzOiAgICAgIHJlbmRlclJ1bGVzKCk7IGJyZWFrOwogICAgICAgIGNhc2UgR2FtZVN0YXRlOjpQbGFjZW1lbnQ6IHJlbmRlclBsYWNlbWVudCgpOyBicmVhazsKICAgICAgICBjYXNlIEdhbWVTdGF0ZTo6QmF0dGxlOiAgICByZW5kZXJCYXR0bGUoKTsgYnJlYWs7CiAgICAgICAgY2FzZSBHYW1lU3RhdGU6OkJvdFR1cm46ICAgIHJlbmRlckJvdFR1cm4oKTsgYnJlYWs7CiAgICAgICAgY2FzZSBHYW1lU3RhdGU6OlZpY3Rvcnk6ICAgcmVuZGVyVmljdG9yeSgpOyBicmVhazsKICAgICAgICBjYXNlIEdhbWVTdGF0ZTo6RGVmZWF0OiAgICByZW5kZXJEZWZlYXQoKTsgYnJlYWs7CiAgICAgICAgZGVmYXVsdDogYnJlYWs7CiAgICB9CiAgICAKICAgIHdpbmRvdy5kaXNwbGF5KCk7Cn0KCi8vIC0tLSDQnNC10YAg0YLRiyAtLS0KCnZvaWQgR2FtZTo6cmVuZGVyTWVudSgpIHsKICAgIGZvciAoaW50IGkgPSAwOyBpIDwgNTsgaSsrKSB7CiAgICAgICAgZmxvYXQgeCA9IDEwMCArIGkgKiAyMDAgKyBzaW4oYW5pbVRpbWVyICsgaSkgKiAyMDsKICAgICAgICBmbG9hdCB5ID0gNTAwICsgY29zKGFuaW1UaW1lciAqIDAuN2YgKyBpKSAqIDMwOwogICAgICAgIHNmOjpSZWN0YW5nbGVTaGFwZSB3YXZlKHNmOjpWZWN0b3IyZihDRUxMX1NJWkUsIENFTExfU0laRSkpOwogICAgICAgIHdhdmUuc2V0UG9zaXRpb24oeCwgeSk7CiAgICAgICAgd2F2ZS5zZXRGaWxsQ29sb3Ioc2Y6OkNvbG9yKDMwLCA4MCwgMTQwLCA4MCkpOwogICAgICAgIHdpbmRvdy5kcmF3KHdhdmUpOwogICAgfQogICAgCiAgICBkcmF3VGV4dCgiTU9SU0tPSiBCT0oiLCBXSU5ET1dfV0lEVEggLyAyLCA4MCwgNTYsIFRFWFRfR09MRCwgdHJ1ZSk7CiAgICBkcmF3VGV4dCgiS29uc29sZW55amQgYm9qIHYyLjAiLCBXSU5ET1dfV0lEVEggLyAyLCAxNDAsIDIwLCBURVhULCB0cnVlKTsKICAgIAogICAgY29uc3QgY2hhciogYnV0dG9uc1tdID0geyJOYWNoYXRfaWdydSIsICJQcmF3aWxhIiwgIk5hc3Ryb2prIiwgIld5eG9kIn07CiAgICBmb3IgKGludCBpID0gMDsgaSA8IDQ7IGkrKykgewogICAgICAgIGZsb2F0IHkgPSAyNTAgKyBpICogNzA7CiAgICAgICAgZHJhd0J1dHRvbihidXR0b25zW2ldLCBXSU5ET1dfV0lEVEggLyAyIC0gMTUwLCB5LCAzMDAsIDUwLAogICAgICAgICAgICAgICAgICAgZmFsc2UsIGkgPT0gbWVudVNlbGVjdGlvbik7CiAgICB9CiAgICAKICAgIGRyYXdUZXh0KCJTdHJlbGtpICBeL3YgLSB3eWJvciB8IEVOVEVSIC0gcG9kd2VyZGl0eCIsIFdJTkRPV19XSURUSCAvIDIsIDU2MCwgMTYsIHNmOjpDb2xvcigxNTAsIDE1MCwgMTcwKSwgdHJ1ZSk7CiAgICBkcmF3VGV4dCgiU0ZNTCB2Mi4wIHwgQysrMTciLCBXSU5ET1dfV0lEVEggLyAyLCA3MDAsIDE0LCBzZjpDb2xvcigxMDAsIDEwMCwgMTIwKSwgdHJ1ZSk7Cn0KCi8vIC0tLSDQndC40YbQtdCz0L7QtSDQstC40YEgLS0tCgp2b2lkIEdhbWU6OnJlbmRlclNldHRpbmdzKCkgewogICAgZHJhd1RleHQoIk5BU1RST0pLSSIsIFdJTkRPV19XSURUSCAvIDIsIDYwLCAzNiwgVEVYVF9HT0xELCB0cnVlKTsKICAgIAogICAgY29uc3QgY2hhciogbGFiZWxzW10gPSB7CiAgICAgICAgIlNsb3pobm9zdCBib3RhIiwKICAgICAgICAiUmFzc3Rhbm93a2Ega29yYWJsZWoiLAogICAgICAgICJTd3VrIiwKICAgICAgICAiTmF6YWQgdSBtZW51IgogICAgfTsKICAgIGNvbnN0IGNoYXIqIHZhbHVlc1tdID0gewogICAgICAgIGJvdExldmVsID09IDAgPyAiTEVHS0pJIiA6ICJTTG9aTk9KSSIsCiAgICAgICAgYXV0b1BsYWNlID8gIkFXVE9NQVRJIiA6ICJWVVJDSE5VSlUiLAogICAgICAgIHNvdW5kRW5hYmxlZCA/ICJXS0wiIDogIldZS0wiLAogICAgICAgICIiCiAgICB9OwogICAgCiAgICBmb3IgKGludCBpID0gMDsgaSA8IDQ7IGkrKykgewogICAgICAgIGZsb2F0IHkgPSAxODAgKyBpICogOTA7CiAgICAgICAgc2Y6OkNvbG9yIGNvbG9yID0gKGkgPT0gc2V0dGluZ3NTZWxlY3Rpb24pID8gc2Y6OkNvbG9yOjpZZWxsb3cgOiBURVhUOwogICAgICAgIAogICAgICAgIGRyYXdUZXh0KGxhYmVsc1tpXSwgV0lORE9XX1dJRFRIIC8gMiAtIDIwMCwgeSwgMjQsIGNvbG9yLCBmYWxzZSk7CiAgICAgICAgaWYgKHN0cmxlbih2YWx1ZXNbaV0pID4gMCkgewogICAgICAgICAgICBzZjpDb2xvciB2YWxDb2xvciA9IChpID09IHNldHRpbmdzU2VsZWN0aW9uKSA/IHNmOjpDb2xvcjo6R3JlZW4gOiBzZjpDb2xvcigxMDAsIDIwMCwgMjU1KTsKICAgICAgICAgICAgZHJhd1RleHQodmFsdWVzW2ldLCBXSU5ET1dfV0lEVEggLyAyICsgMTAwLCB5LCAyNCwgdmFsQ29sb3IsIGZhbHNlKTsKICAgICAgICB9CiAgICB9CiAgICAKICAgIGRyYXdUZXh0KCI8Lz4gLSBpem1lbml0eCwgRU5URVIvRVNDIC0gbmF6YWQiLCBXSU5ET1dfV0lEVEggLyAyLCA2NTAsIDE2LCBzZjpDb2xvcigxNTAsIDE1MCwgMTcwKSwgdHJ1ZSk7Cn0KCi8vIC0tLSDQn9GA0L7QstC10YDRj9C1IC0tLQoKdm9pZCBHYW1lOjpyZW5kZXJSdWxlcygpIHsKICAgIGRyYXdUZXh0KCJQUkFXSUxBIElHUlkiLCBXSU5ET1dfV0lEVEggLyAyLCA1MCwgMzYsIFRFWFRfR09MRCwgdHJ1ZSk7CiAgICAKICAgIGNvbnN0IGNoYXIqIHJ1bGVzW10gPSB7CiAgICAgICAgIkNlbDogcG90b3BpdHggd2VzJyBmbG90IHByb3Rpd25pa2EuIiwKICAgICAgICAiIiwKICAgICAgICAiRmxvdCAoMTAga29yYWJsZWopOiIsCiAgICAgICAgIiAgMSB4IDQtcGFsdWVueWogKGF2aWFub3NlYykiLAogICAgICAgICIgIDIgeCAzLXBhbHVibnlqIChrcmVqc2VyYSkiLAogICAgICAgICIgIDMgeCAyLXBhbHVibnlqIChqZXNtaW5jYSkiLAogICAgICAgICIgIDQgeCAxLXBhbHVibnlqIChtaW5vbm9zY2EpIiwKICAgICAgICAiIiwKICAgICAgICAiVXByYdsZW5pZToiLAogICAgICAgICIgIFN0cmVsa2kgLSBwZXJlbWV3ZW5pZSBwcml6ZWxhL2t1cnNvcmEiLAogICAgICAgICIgIEVOVEVSICAgLSB3eXN0cmVsIC8gcG9zdGF3aXRfa29yYWJsIiwKICAgICAgICAiICBQUk9CRUwgIC0gcG93b3JvdCBrb3JhYmxqIChnb3Jpei92ZXIpIiwKICAgICAgICAiICBFU0MgICAgIC0gbWVudSAvIHd5aG9kIiwKICAgICAgICAiIiwKICAgICAgICAiUHJpIHBvcGFkYW5pSSAtIGRvcG9sbml0ZWxueWogaG9kLiIsCiAgICAgICAgIlBvYmV6amRhZXQgdG90LCBrdG8gcGVyd3ltIHBvdG9waXQgZmxvdCEiCiAgICB9OwogICAgCiAgICBmb3IgKGludCBpID0gMDsgaSA8IDE3OyBpKyspIHsKICAgICAgICBkcmF3VGV4dChydWxlc1tpXSwgMTAwLCAxMjAgKyBpICogMjgsIDIwLCBURVhULCBmYWxzZSk7CiAgICB9CiAgICAKICAgIGRyYXdUZXh0KCJOYXprbWl0ZSBFTlRFUiBpbGkgRVMgZGxqYSB3eWhvZGEuLi4iLCBXSU5ET1dfV0lEVEggLyAyLCA3MDAsIDE4LCBURVhUX0dPTEQsIHRydWUpOwp9CgovLyAtLS0g0KDRgNGD0LPRg9C70L7RgtC+0LkgLS0tCgp2b2lkIEdhbWU6OnN0YXJ0UGxhY2VtZW50KCkgewogICAgc3RhdGUgPSBHYW1lU3RhdGU6OlBsYWNlbWVudDsKICAgIHBsYXllckJvYXJkLT5jbGVhcigpOwogICAgZW5lbXlCb2FyZC0+Y2xlYXIoKTsKICAgIGVuZW15Qm9hcmQtPmF1dG9QbGFjZSgpOwogICAgY3VycmVudFNoaXBJZHggPSAwOwogICAgY3Vyc29yUiA9IDA7IGN1cnNvckMgPSAwOwogICAgcGxhY2luZ0hvcml6b250YWwgPSB0cnVlOwogICAgCiAgICBpZiAoYXV0b1BsYWNlKSB7CiAgICAgICAgcGxheWVyQm9hcmQtPmF1dG9QbGFjZSgpOwogICAgICAgIHN0YXJ0QmF0dGxlKCk7CiAgICB9Cn0KCnZvaWQgR2FtZTo6cmVuZGVyUGxhY2VtZW50KCkgewogICAgZHJhd1RleHQoIlJBU1NUQU5PVktBIEtPUkFCTEVKIiwgV0lORE9XX1dJRFRIIC8gMiwgMjAsIDI4LCBURVhUX0dPTEQsIHRydWUpOwogICAgCiAgICBpbnQgc2l6ZSA9IEZMRE1UX1NJWkVTW2N1cnJlbnRTaGlwSWR4XTsKICAgIGJvb2wgdmFsaWQgPSBwbGF5ZXJCb2FyZC0+Y2FuUGxhY2VTaGlwKGN1cnNvclIsIGN1cnNvckMsIHNpemUsIHBsYWNpbmdIb3Jpem9udGFsKTsKICAgIHBsYXllckJvYXJkLT5kcmF3KHdpbmRvdywgZm9udCwgY3Vyc29yUiwgY3Vyc29yQywgdHJ1ZSwgc2l6ZSwgcGxhY2luZ0hvcml6b250YWwsIHZhbGlkKTsKICAgIAogICAgZHJhd1RleHQoIlZhc2hlIHBvbGUiLCA1MCArIEJPQVJEX1BJWEVMUyAvIDIsIDU1LCAxOCwgVEVYVF9HT0xELCB0cnVlKTsKICAgIAogICAgZmxvYXQgcGFuZWxYID0gNTAgKyBCT0FSRF9QSVhFTFMgKyA2MDsKICAgIHNmOjpSZWN0YW5nbGVTaGFwZSBwYW5lbChzZjpWZWN0b3IyZigzMDAsIDUwMCkpOwogICAgcGFuZWwuc2V0UG9zaXRpb24ocGFuZWxYLCA4MCk7CiAgICBwYW5lbC5zZXRGaWxsQ29sb3IoUEFORUxfQkcpOwogICAgcGFuZWwuc2V0T3V0bGluZUNvbG9yKEdSSURfTElORSk7CiAgICBwYW5lbC5zZXRPdXRsaW5lVGhpY2tuZXNzKDEpOwogICAgd2luZG93LmRyYXcocGFuZWwpOwogICAgCiAgICBkcmF3VGV4dCgiS29yYWJsejoiLCBwYW5lbFggKyAyMCwgMTAwLCAyMiwgVEVYVCwgZmFsc2UpOwogICAgZHJhd1RleHQoc3RkOjp0b19zdHJpbmcoc2l6ZSkgKyAiLXBhbHVibnlqIiwgcGFuZWxYICsgMjAsIDEzMCwgMjYsIFRFWFRfR09MRCwgZmFsc2UpOwogICAgCiAgICBkcmF3VGV4dCgiTmFwcmF2bGVuaWU6IiwgcGFuZWxYICsgMjAsIDE4MCwgMjAsIFRFWFQsIGZhbHNlKTsKICAgIGRyYXdUZXh0KHBsYWNpbmdIb3Jpem9udGFsID8gIj4+PiBHT1JJWk9OVEFMTk8iIDogInZ2diBWRVJUSUtBTE5PIiwKICAgICAgICAgICAgIHBhbmVsWCArIDIwLCAyMTAsIDIwLCBzZjpDb2xvcigxMDAsIDIwMCwgMjU1KSwgZmFsc2UpOwogICAgCiAgICBpZiAodmFsaWQpIHsKICAgICAgICBkcmF3VGV4dCgiW09LXSBNb2hubyBzdGF2aXR4IiwgcGFuZWxYICsgMjAsIDI2MCwgMjAsIHNmOjpDb2xvcig1MCwgMjAwLCA4MCksIGZhbHNlKTsKICAgIH0gZWxzZSB7CiAgICAgICAgZHJhd1RleHQoIltYIE1lc3RvIHphbmlhdG8hIiwgcGFuZWxYICsgMjAsIDI2MCwgMjAsIHNmOjpDb2xvcigyNTUsIDgwLCA4MCksIGZhbHNlKTsKICAgIH0KICAgIAogICAgZHJhd1RleHQoIlVwcmF3bGVuaWU6IiwgcGFuZWxYICsgMjAsIDMyMCwgMTgsIHNmOjpDb2xvcigxNTAsIDE1MCwgMTcwKSwgZmFsc2UpOwogICAgZHJhd1RleHQoIlN0cmVsa2kgLSBkdml6aGVuaWUiLCBwYW5lbFggKyAyMCwgMzUwLCAxOCwgc2Y6OkNvbG9yKDE1MCwgMTUwLCAxNzApLCBmYWxzZSk7CiAgICBkcmF3VGV4dCgiUFJPQkVMIC0gcG93b3JvdCIsIHBhbmVsWCArIDIwLCAzODAsIDE4LCBzZjpDb2xvcigxNTAsIDE1MCwgMTcwKSwgZmFsc2UpOwogICAgZHJhd1RleHQoIkVOVEVSIC0gcG9zdGF3aXgiLCBwYW5lbFggKyAyMCwgNDEwLCAxOCwgc2Y6OkNvbG9yKDE1MCwgMTUwLCAxNzApLCBmYWxzZSk7CiAgICBkcmF3VGV4dCgiRVNDIC0gbWVudSIsIHBhbmVsWCArIDIwLCA0NDAsIDE4LCBzZjpDb2xvcigxNTAsIDE1MCwgMTcwKSwgZmFsc2UpOwogICAgCiAgICBkcmF3VGV4dChzdGQ6OnRvX3N0cmluZyhjdXJyZW50U2hpcElkeCkgKyAiIC8gIiArIHN0ZDo6dG9fc3RyaW5nKEZMRE1UX0NPVU5UKSwKICAgICAgICAgICAgIHBhbmVsWCArIDIwLCA1MDAsIDI0LCBURVhUX0dPTEQsIGZhbHNlKTsKICAgIAogICAgZHJhd1RleHQoIk9zdGFsb3N6OiIsIHBhbmVsWCArIDIwLCA1NDAsIDE4LCBzZjpDb2xvcigxNTAsIDE1MCwgMTcwKSwgZmFsc2UpOwogICAgZm9yIChpbnQgaSA9IGN1cnJlbnRTaGlwSWR4OyBpIDwgRkxFRVRfQ09VTlQ7IGkrKykgewogICAgICAgIHN0ZDo6c3RyaW5nIGJhciA9ICJbIiArIHN0ZDo6c3RyaW5nKEZMRE1UX1NJWkVTW2ldLCAnPScpICsgIl0iOwogICAgICAgIGRyYXdUZXh0KGJhciwgcGFuZWxYICsgMjAsIDU2NSArIChpIC0gY3VycmVudFNoaXBJZHgpICogMjIsIDE4LAogICAgICAgICAgICAgICAgIHNmOjpDb2xvcigxMDAsIDE4MCwgMjU1KSwgZmFsc2UpOwogICAgfQp9CgovLyAtLS0g0JHQvtGCIC0tLQoKdm9pZCBHYW1lOjpzdGFydEJhdHRsZSgpIHsKICAgIHN0YXRlID0gR2FtZVN0YXRlOjpCYXR0bGU7CiAgICBjdXJzb1IgPSAwOyBjdXJzb3JDLCA9IDA7CiAgICBib3RUaGlua2luZyA9IGZhbHNlOwp9Cgp2b2lkIEdhbWU6OnJlbmRlckJhdHRsZSgpIHsKICAgIGRyYXdUZXh0KCJCT0ogUyBCT1RPTSIgLCBXSU5ET1dfV0lEVEggLyAyLCAxNSwgMjQsIFRFWFRfR09MRCwgdHJ1ZSk7CiAgICAKICAgIGVuZW15Qm9hcmQtPmRyYXcod2luZG93LCBmb250LCBjdXJzb1IsIGN1cnNvckMsIGZhbHNlLCAwLCB0cnVlLCB0cnVlKTsKICAgIGRyYXdUZXh0KCJQb2xlIHZyYWdhIiwgNTgwICsgQk9BUkRfUElYRUxTIC8gMiwgNTUsIDE4LAogICAgICAgICAgICAgc2Y6OkNvbG9yKDI1NSwgMTAwLCAxMDApLCB0cnVlKTsKICAgIAogICAgcGxheWVyQm9hcmQtPmRyYXcod2luZG93LCBmb250LCAtMSwgLTEsIHRydWUsIDAsIHRydWUsIHRydWUpOwogICAgZHJhd1RleHQoIlZhc2hlIHBvbGUiLCA1MCArIEJPQVJEX1BJWEVMUyAvIDIsIDU1LCAxOCwKICAgICAgICAgICAgIHNmOjpDb2xvcigxMDAsIDI1NSwgMTAwKSwgdHJ1ZSk7CiAgICAKICAgIHNmOjpSZWN0YW5nbGVTaGFwZSBpbmZvUGFuZWwoc2Y6OlZlY3RvcjJmKDIwMCwgMTIwKSk7CiAgICBpbmZvUGFuZWwuc2V0UG9zaXRpb24oNTAsIDU4MCk7CiAgICBpbmZvUGFuZWwuc2V0RmlsbENvbG9yKFBBTkVMX0JHKTsKICAgIGluZm9QYW5lbC5zZXRPdXRsaW5lQ29sb3IoR1JJRF9MSU5FKTsKICAgIGluZm9QYW5lbC5zZXRPdXRsaW5lVGhpY2tuZXNzKDEpOwogICAgd2luZG93LmRyYXcoaW5mb1BhbmVsKTsKICAgIAogICAgZHJhd1RleHQoIlZyYWc6ICIgKyBzdGQ6OnRvX3N0cmluZyhlbmVteUJvYXJkLT5nZXRTaGlwc0FsaXZlKCkpICsgIiBrb3IuIiwKICAgICAgICAgICAgIDcwLCA1OTAsIDE4LCBzZjpDb2xvcigyNTUsIDEwMCwgMTAwKSwgZmFsc2UpOwogICAgZHJhd1RleHQoIlZ5OiAgICArIHN0ZDo6dG9fc3RyaW5nKHBsYXllckJvYXJkLT5nZXRTaGlwc0FsaXZlKCkpICsgIiBrb3IuIiwKICAgICAgICAgICAgIDcwLCA2MjAsIDE4LCBzZjpDb2xvcigxMDAsIDI1NSwgMTAwKSwgZmFsc2UpOwogICAgZHJhd1RleHQoIlN0cmVsa2kgfCBFTlRFUiB8IEVTQyIsCiAgICAgICAgICAgICA3MCwgNjUwLCAxNiwgc2Y6OkNvbG9yKDE1MCwgMTUwLCAxNzApLCBmYWxzZSk7CiAgICAKICAgIGRyYXdUZXh0KCJQcml6ZWw6ICIgKyBzdGQ6OnN0cmluZygxLCAnQScgKyBjdXJzb1IpICsgc3RkOjp0b19zdHJpbmcoY3Vyc29yQyArIDEpLAogICAgICAgICAgICAgNTgwLCA1ODAsIDIwLCBURVhUX0dPTEQsIGZhbHNlKTsKfQoKLy8gLS0tINCk0L7Qu9C+0LHQtNC5INCy0YvQutC+0LMgLS0tCgp2b2lkIEdhbWU6OnJlbmRlckJvdFR1cm4oKSB7CiAgICByZW5kZXJCYXR0bGUoKTsKICAgIAogICAgc2Y6OlJlY3RhbmdsZVNoYXBlIG92ZXJsYXkoc2Y6OlZlY3RvcjJmKFdJTkRPV19XSURUSCwgV0lORE9XX0hFSUdIVCkpOwogICAgb3ZlcmxheS5zZXRGaWxsQ29sb3Ioc2Y6OkNvbG9yKDAsIDAsIDAsIDEyMCkpOwogICAgd2luZG93LmRyYXcob3ZlcmxheSk7CiAgICAKICAgIGRyYXdUZXh0KCJCT1QgRFVNQUVULi4uIiwgV0lORE9XX1dJRFRIIC8gMiwgV0lORE9XX0hFSUdIVCAvIDIsIDM2LAogICAgICAgICAgICAgc2Y6OkNvbG9yKDI1NSwgMjAwLCA1MCksIHRydWUpOwogICAgCiAgICBpbnQgZG90cyA9IChpbnQpKGJvdFRpbWVyICogMykgJSA0OwogICAgc3RkOjpzdHJpbmcgZG90U3RyKGRvdHMsICcuJyk7CiAgICBkcmF3VGV4dChkb3RTdHIsIFdJTkRPV19XSURUSCAvIDIsIFdJTkRPV19IRUlHSFQgLyAyICsgNDAsIDMwLAogICAgICAgICAgICAgc2Y6OkNvbG9yKDI1NSwgMjAwLCA1MCksIHRydWUpOwp9CgovLyAtLS0g0J/QvtGC0LjRgdGC0L7QuyAvINCf0L7RgtC40YHRgtC+0LsgLS0tCgp2b2lkIEdhbWU6OnJlbmRlclZpY3RvcnkoKSB7CiAgICBzZjpSZWN0YW5nbGVTaGFwZSBvdmVybGF5KHNmOjpWZWN0b3IyZihXSU5ET1dfV0lEVEgsIFdJTkRPV19IRUlHSFQpKTsKICAgIG92ZXJsYXkuc2V0RmlsbENvbG9yKHNmOjpDb2xvcigwLCAzMCwgMCwgMTgwKSk7CiAgICB3aW5kb3cuZHJhdyhvdmVybGF5KTsKICAgIAogICAgZHJhd1RleHQoIlZZIFBPQkVESUwhIiwgV0lORE9XX1dJRExUIC8gMiwgMjUwLCA1NiwKICAgICAgICAgICAgIHNmOjpDb2xvcig1MCwgMjU1LCAxMDApLCB0cnVlKTsKICAgIGRyYXdUZXh0KCJGbG90IHByb3Rpd25pa2EgdW5paHRvdmhlbiEiLCBXSU5ET1dfV0lEVEggLyAyLCAzMzAsIDI0LCBURVhULCB0cnVlKTsKICAgIGRyYXdUZXh0KCJFTlRFUiAtIG1lbnUgfCBFU0MgLSB3eWhvZCIsIFdJTkRPV19XSURUSCAvIDIsIDQ1MCwgMjAsIFRFWFRfR09MRCwgdHJ1ZSk7Cn0KCnZvaWQgR2FtZTo6cmVuZGVyRGVmZWF0KCkgewogICAgc2Y6OlJlY3RhbmdsZVNoYXBlIG92ZXJsYXkoc2Y6OlZlY3RvcjJmKFdJTkRPV19XSURUSCwgV0lORE9XX0hFSUdIVCkpOwogICAgb3ZlcmxheS5zZXRGaWxsQ29sb3Ioc2Y6OkNvbG9yKDMwLCAwLCAwLCAxODApKTsKICAgIHdpbmRvdy5kcmF3KG92ZXJsYXkpOwogICAgCiAgICBkcmF3VGV4dCgiVlkgUFJPSUdSQUxJLi4uIiwgV0lORE9XX1dJRFRIIC8gMiwgMjUwLCA1NiwKICAgICAgICAgICAgIHNmOjpDb2xvcigyNTUsIDUwLCA1MCksIHRydWUpOwogICAgZHJhd1RleHQoIlZhc2ggZmxvdCBwb3RvcGxlbi4iLCBXSU5ET1dfV0lEVEggLyAyLCAzMzAsIDI0LCBURVhULCB0cnVlKTsKICAgIGRyYXdUZXh0KCJFTlRFUiAtIG1lbnUgfCBFU0MgLSB3eWhvZCIsIFdJTkRPV19XSURUSCAvIDIsIDQ1MCwgMjAsIFRFWFRfR09MRCwgdHJ1ZSk7Cn0KCi8vIC0tLSDQotC40LzQtdC90YLRiyDRgtCw0LrQttCwIC0tLQoKdm9pZCBHYW1lOjpkcmF3VGV4dChjb25zdCBzdGQ6OnN0cmluZyYgdGV4dCwgZmxvYXQgeCwgZmxvYXQgeSwgaW50IHNpemUsCiAgICAgICAgICAgICAgICBzZjpDb2xvciBjb2xvciwgYm9vbCBjZW50ZXIpIHsKICAgIHNmOjpUZXh0IHQodGV4dCwgZm9udCwgc2l6ZSk7CiAgICB0LnNldEZpbGxDb2xvcihjb2xvcik7CiAgICBpZiAoY2VudGVyKSB7CiAgICAgICAgc2Y6OkZsb2F0UmVjdCBib3VuZHMgPSB0LmdldExvY2FsQm91bmRzKCk7CiAgICAgICAgdC5zZXRPcmlnaW4oYm91bmRzLndpZHRoIC8gMiwgMCk7CiAgICB9CiAgICB0LnNldFBvc2l0aW9uKHgsIHkpOwogICAgd2luZG93LmRyYXcodCk7Cn0KCnZvaWQgR2FtZTo6ZHJhd0J1dHRvbihjb25zdCBzdGQ6OnN0cmluZyYgdGV4dCwgZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgdwsKICAgICAgICAgICAgICAgICAgICAgIGZsb2F0IGgsIGJvb2wgaG92ZXJlZCwgYm9vbCBzZWxlY3RlZCkgewogICAgc2Y6OlJlY3RhbmdsZVNoYXBlIGJ1dHRvbihzZjpWZWN0b3IyZih3LCBoKSk7CiAgICBidXR0b24uc2V0UG9zaXRpb24oeCwgeSk7CiAgICAKICAgIHNmOjpDb2xvciBmaWxsQ29sb3IgPSBzZWxlY3RlZCA/IEJVVFRPTkhPVkVSIDogQlVUVE9OOwogICAgaWYgKGhvdmVyZWQpIGZpbGxDb2xvciA9IEJVVFRPTkhPVkVSOwogICAgCiAgICBidXR0b24uc2V0RmlsbENvbG9yKGZpbGxDb2xvcik7CiAgICBidXR0b24uc2V0T3V0bGluZUNvbG9yKHNlbGVjdGVkID8gc2Y6OkNvbG9yOjpZZWxsb3cgOiBzZjpDb2xvcigxMDAsIDE2MCwgMjIwKSk7CiAgICBidXR0b24uc2V0T3V0bGluZVRoaWNrbmVzcyhzZWxlY3RlZCA/IDMgOiAyKTsKICAgIHdpbmRvdy5kcmF3KGJ1dHRvbik7CiAgICAKICAgIHNmOjpUZXh0IGxhYmVsKHRleHQsIGZvbnQsIDI0KTsKICAgIGxhYmVsLnNldEZpbGxDb2xvcihCVVRUT05fVEVYVCk7CiAgICBzZjpGbG9hdFJlY3QgYm91bmRzID0gbGFiZWwuZ2V0TG9jYWxCb3VuZHMoKTsKICAgIGxhYmVsLnNldE9yaWdpbihib3VuZHMud2lkdGggLyAyLCBib3VuZHMuaGVpZ2h0IC8gMik7CiAgICBsYWJlbC5zZXRQb3NpdGlvbih4ICsgdyAvIDIsIHkgKyBoIC8gMiAtIDUpOwogICAgd2luZG93LmRyYXcobGFiZWwpOwp9Cgpib29sIEdhbWU6OmlzTW91c2VPdmVyKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHcsIGZsb2F0IGgpIGNvbnN0IHsKICAgIHNmOjpWZWN0b3IyaSBtb3VzZVBvcyA9IHNmOjpNb3VzZTo6Z2V0UG9zaXRpb24od2luZG93KTsKICAgIHJldHVybiBtb3VzZVBvcy54ID49IHggJiYgbW91c2VQb3MueCA8PSB4ICsgdyAmJgogICAgICAgICAgIG1vdXNlUG9zLnkgPj0geSAmJiBtb3VzZVBvcy55IDw9IHkgKyBoOwp9Cgp2b2lkIEdhbWU6OnBsYXlIaXRTb3VuZCgpIHsKfQoKdm9pZCBHYW1lOjpwbGF5TWlzc1NvdW5kKCkgewp9Cgp2b2lkIEdhbWU6OnJlc2V0R2FtZSgpIHsKICAgIHBsYXllckJvYXJkLT5jbGVhcigpOwogICAgZW5lbXlCb2FyZC0+Y2xlYXIoKTsKICAgIGN1cnNvclIgPSAwOyBjdXJzb3JDID0gMDsKICAgIGN1cnJlbnRTaGlwSWR4ID0gMDsKICAgIG1lbnVTZWxlY3Rpb24gPSAwOwp9Cg==
+// ============================================================================
+// Game.cpp - Главный игровой класс
+// ============================================================================
+
+#include "Game.hpp"
+#include <iostream>
+#include <cmath>
+
+using namespace Colors;
+
+Game::Game()
+    : window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE,
+             sf::Style::Close | sf::Style::Titlebar),
+      state(GameState::Menu), prevState(GameState::Menu),
+      cursorR(0), cursorC(0), currentShipIdx(0),
+      placingHorizontal(true), botLevel(0),
+      botThinking(false), botTimer(0),
+      soundEnabled(true), autoPlace(false),
+      animTimer(0), menuSelection(0), settingsSelection(0) {
+    
+    window.setFramerateLimit(60);
+    loadResources();
+    
+    playerBoard = std::make_unique<Board>(50, 80, false);
+    enemyBoard = std::make_unique<Board>(580, 80, true);
+}
+
+Game::~Game() {}
+
+void Game::loadResources() {
+    if (!font.loadFromFile("assets/fonts/arial.ttf")) {
+    }
+    fontBold = font;
+}
+
+void Game::run() {
+    sf::Clock clock;
+    
+    while (window.isOpen() && state != GameState::Exit) {
+        float dt = clock.restart().asSeconds();
+        animTimer += dt;
+        
+        handleEvents();
+        update(dt);
+        render();
+    }
+}
+
+void Game::handleEvents() {
+    sf::Event event;
+    while (window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed) {
+            state = GameState::Exit;
+        }
+        
+        if (event.type == sf::Event::KeyPressed) {
+            if (state == GameState::Menu) {
+                if (event.key.code == sf::Keyboard::Up && menuSelection > 0)
+                    menuSelection--;
+                if (event.key.code == sf::Keyboard::Down && menuSelection < 3)
+                    menuSelection++;
+                if (event.key.code == sf::Keyboard::Enter) {
+                    switch (menuSelection) {
+                        case 0: startPlacement(); break;
+                        case 1: state = GameState::Rules; break;
+                        case 2: state = GameState::Settings; break;
+                        case 3: state = GameState::Exit; break;
+                    }
+                }
+            }
+            else if (state == GameState::Settings) {
+                if (event.key.code == sf::Keyboard::Up && settingsSelection > 0)
+                    settingsSelection--;
+                if (event.key.code == sf::Keyboard::Down && settingsSelection < 3)
+                    settingsSelection++;
+                if (event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Right) {
+                    if (settingsSelection == 0) botLevel = 1 - botLevel;
+                    if (settingsSelection == 1) autoPlace = !autoPlace;
+                    if (settingsSelection == 2) soundEnabled = !soundEnabled;
+                }
+                if (event.key.code == sf::Keyboard::Enter && settingsSelection == 3)
+                    state = GameState::Menu;
+                if (event.key.code == sf::Keyboard::Escape)
+                    state = GameState::Menu;
+            }
+            else if (state == GameState::Rules) {
+                if (event.key.code == sf::Keyboard::Escape ||
+                    event.key.code == sf::Keyboard::Enter)
+                    state = GameState::Menu;
+            }
+            else if (state == GameState::Placement) {
+                int size = FLEET_SIZES[currentShipIdx];
+                
+                if (event.key.code == sf::Keyboard::Up && cursorR > 0) cursorR--;
+                if (event.key.code == sf::Keyboard::Down && cursorR < BOARD_SIZE - 1) cursorR++;
+                if (event.key.code == sf::Keyboard::Left && cursorC > 0) cursorC--;
+                if (event.key.code == sf::Keyboard::Right && cursorC < BOARD_SIZE - 1) cursorC++;
+                
+                if (event.key.code == sf::Keyboard::Space) {
+                    placingHorizontal = !placingHorizontal;
+                    if (placingHorizontal) {
+                        if (cursorC + size > BOARD_SIZE) cursorC = BOARD_SIZE - size;
+                    } else {
+                        if (cursorR + size > BOARD_SIZE) cursorR = BOARD_SIZE - size;
+                    }
+                }
+                
+                if (event.key.code == sf::Keyboard::Enter) {
+                    if (playerBoard->canPlaceShip(cursorR, cursorC, size, placingHorizontal)) {
+                        playerBoard->placeShip(cursorR, cursorC, size, placingHorizontal);
+                        currentShipIdx++;
+                        if (currentShipIdx >= FLEET_COUNT) {
+                            startBattle();
+                        }
+                    }
+                }
+                
+                if (event.key.code == sf::Keyboard::Escape) {
+                    state = GameState::Menu;
+                }
+            }
+            else if (state == GameState::Battle) {
+                if (event.key.code == sf::Keyboard::Up && cursorR > 0) cursorR--;
+                if (event.key.code == sf::Keyboard::Down && cursorR < BOARD_SIZE - 1) cursorR++;
+                if (event.key.code == sf::Keyboard::Left && cursorC > 0) cursorC--;
+                if (event.key.code == sf::Keyboard::Right && cursorC < BOARD_SIZE - 1) cursorC++;
+                
+                if (event.key.code == sf::Keyboard::Enter) {
+                    if (enemyBoard->getCellState(cursorR, cursorC) != CellState::Hit &&
+                        enemyBoard->getCellState(cursorR, cursorC) != CellState::Miss) {
+                        
+                        bool hit = enemyBoard->shoot(cursorR, cursorC);
+                        if (hit) playHitSound(); else playMissSound();
+                        
+                        if (enemyBoard->allShipsSunk()) {
+                            state = GameState::Victory;
+                        } else if (!hit) {
+                            state = GameState::BotTurn;
+                            botTimer = 0;
+                            botThinking = true;
+                        }
+                    }
+                }
+                
+                if (event.key.code == sf::Keyboard::Escape)
+                    state = GameState::Menu;
+            }
+            else if (state == GameState::Victory || state == GameState::Defeat) {
+                if (event.key.code == sf::Keyboard::Enter) {
+                    resetGame();
+                    state = GameState::Menu;
+                }
+                if (event.key.code == sf::Keyboard::Escape)
+                    state = GameState::Menu;
+            }
+        }
+    }
+}
+
+void Game::update(float dt) {
+    if (state == GameState::BotTurn && botThinking) {
+        botTimer += dt;
+        if (botTimer >= BOT_THINK_DELAY) {
+            botMakeMove();
+            botThinking = false;
+            if (playerBoard->allShipsSunk()) {
+                state = GameState::Defeat;
+            } else {
+                state = GameState::Battle;
+            }
+        }
+    }
+}
+
+void Game::botMakeMove() {
+    if (botLevel == 0) {
+        int r, c;
+        do {
+            r = rand() % BOARD_SIZE;
+            c = rand() % BOARD_SIZE;
+        } while (playerBoard->getCellState(r, c) == CellState::Hit ||
+                 playerBoard->getCellState(r, c) == CellState::Miss);
+        playerBoard->shoot(r, c);
+    } else {
+        static int lastHitR = -1, lastHitC = -1;
+        static bool hunting = false;
+        
+        if (hunting && lastHitR >= 0) {
+            int dirs[4][2] = {{-1,0},{1,0},{0,-1},{0,1}};
+            for (auto& d : dirs) {
+                int nr = lastHitR + d[0], nc = lastHitC + d[1];
+                if (nr >= 0 && nr < BOARD_SIZE && nc >= 0 && nc < BOARD_SIZE) {
+                    auto s = playerBoard->getCellState(nr, nc);
+                    if (s != CellState::Hit && s != CellState::Miss) {
+                        playerBoard->shoot(nr, nc);
+                        if (playerBoard->getCellState(nr, nc) == CellState::Hit) {
+                            lastHitR = nr; lastHitC = nc;
+                        } else {
+                            hunting = false;
+                        }
+                        return;
+                    }
+                }
+            }
+            hunting = false;
+        }
+        
+        if (!hunting) {
+            int r, c;
+            int attempts = 0;
+            do {
+                r = rand() % BOARD_SIZE;
+                c = rand() % BOARD_SIZE;
+                attempts++;
+            } while (attempts < 200 && ((r + c) % 2 != 0 ||
+                     playerBoard->getCellState(r, c) == CellState::Hit ||
+                     playerBoard->getCellState(r, c) == CellState::Miss));
+            
+            if (attempts >= 200) {
+                do {
+                    r = rand() % BOARD_SIZE;
+                    c = rand() % BOARD_SIZE;
+                } while (playerBoard->getCellState(r, c) == CellState::Hit ||
+                         playerBoard->getCellState(r, c) == CellState::Miss);
+            }
+            
+            playerBoard->shoot(r, c);
+            if (playerBoard->getCellState(r, c) == CellState::Hit) {
+                lastHitR = r; lastHitC = c;
+                hunting = true;
+            }
+        }
+    }
+}
+
+void Game::render() {
+    window.clear(BG);
+    
+    switch (state) {
+        case GameState::Menu:       renderMenu(); break;
+        case GameState::Settings:   renderSettings(); break;
+        case GameState::Rules:      renderRules(); break;
+        case GameState::Placement:  renderPlacement(); break;
+        case GameState::Battle:     renderBattle(); break;
+        case GameState::BotTurn:    renderBotTurn(); break;
+        case GameState::Victory:    renderVictory(); break;
+        case GameState::Defeat:     renderDefeat(); break;
+        default: break;
+    }
+    
+    window.display();
+}
+
+void Game::renderMenu() {
+    for (int i = 0; i < 5; i++) {
+        float x = 100 + i * 200 + sin(animTimer + i) * 20;
+        float y = 500 + cos(animTimer * 0.7f + i) * 30;
+        sf::RectangleShape wave(sf::Vector2f(CELL_SIZE, CELL_SIZE));
+        wave.setPosition(x, y);
+        wave.setFillColor(sf::Color(30, 80, 140, 80));
+        window.draw(wave);
+    }
+    
+    drawText("MORSKoj BOJ", WINDOW_WIDTH / 2, 80, 56, TEXT_GOLD, true);
+    drawText("Konsolednyj boj v2.0", WINDOW_WIDTH / 2, 140, 20, TEXT, true);
+    
+    const char* buttons[] = {"Nachatx igru", "Prawila", "Nastrojki", "Wyxod"};
+    for (int i = 0; i < 4; i++) {
+        float y = 250 + i * 70;
+        drawButton(buttons[i], WINDOW_WIDTH / 2 - 150, y, 300, 50,
+                   false, i == menuSelection);
+    }
+    
+    drawText("Strelki ^/v - wybor | ENTER - podtwerditx", WINDOW_WIDTH / 2, 560, 16, sf::Color(150, 150, 170), true);
+    drawText("SFML v2.0 | C++17", WINDOW_WIDTH / 2, 700, 14, sf::Color(100, 100, 120), true);
+}
+
+void Game::renderSettings() {
+    drawText("NASTROJKI", WINDOW_WIDTH / 2, 60, 36, TEXT_GOLD, true);
+    
+    const char* labels[] = {
+        "Slozhnostx bota",
+        "Rasstanowka korablej",
+        "Swuk",
+        "Nazad w menu"
+    };
+    const char* values[] = {
+        botLevel == 0 ? "LEGKij" : "SLOZhNYJ",
+        autoPlace ? "AVTOMAT" : "WRUCHNUJU",
+        soundEnabled ? "WKL" : "WYKL",
+        ""
+    };
+    
+    for (int i = 0; i < 4; i++) {
+        float y = 180 + i * 90;
+        sf::Color color = (i == settingsSelection) ? sf::Color::Yellow : TEXT;
+        
+        drawText(labels[i], WINDOW_WIDTH / 2 - 200, y, 24, color, false);
+        if (strlen(values[i]) > 0) {
+            sf::Color valColor = (i == settingsSelection) ? sf::Color::Green : sf::Color(100, 200, 255);
+            drawText(values[i], WINDOW_WIDTH / 2 + 100, y, 24, valColor, false);
+        }
+    }
+    
+    drawText("</> - izmenitx | ENTER/ESC - nazad", WINDOW_WIDTH / 2, 650, 16, sf::Color(150, 150, 170), true);
+}
+
+void Game::renderRules() {
+    drawText("PRAWILA IGRY", WINDOW_WIDTH / 2, 50, 36, TEXT_GOLD, true);
+    
+    const char* rules[] = {
+        "Celx: potopitx wesx flot protiwnika.",
+        "",
+        "Flot (10 korablej):",
+        "  1 x 4-palubnyj (awianosec)",
+        "  2 x 3-palubnyh (krejsera)",
+        "  3 x 2-palubnyh (jesminca)",
+        "  4 x 1-palubnyh (minonosca)",
+        "",
+        "Uprawlenie:",
+        "  Strelki - peremewenie prizela/kursora",
+        "  ENTER   - wystrel / postawitx korablx",
+        "  PROBEL  - poworot korablja (goriz/wert)",
+        "  ESC     - menu / wyhod",
+        "",
+        "Pri popadanii - dopolnitelxnyj hod.",
+        "Pobezhdaet tot, kto perwym potopit flot!"
+    };
+    
+    for (int i = 0; i < 16; i++) {
+        drawText(rules[i], 100, 120 + i * 28, 20, TEXT, false);
+    }
+    
+    drawText("Nazhmite ENTER ili ESC dlja wyhoda...", WINDOW_WIDTH / 2, 680, 18, TEXT_GOLD, true);
+}
+
+void Game::startPlacement() {
+    state = GameState::Placement;
+    playerBoard->clear();
+    enemyBoard->clear();
+    enemyBoard->autoPlace();
+    currentShipIdx = 0;
+    cursorR = 0; cursorC = 0;
+    placingHorizontal = true;
+    
+    if (autoPlace) {
+        playerBoard->autoPlace();
+        startBattle();
+    }
+}
+
+void Game::renderPlacement() {
+    drawText("RASSTANOWKA KORABLEJ", WINDOW_WIDTH / 2, 20, 28, TEXT_GOLD, true);
+    
+    int size = FLEET_SIZES[currentShipIdx];
+    bool valid = playerBoard->canPlaceShip(cursorR, cursorC, size, placingHorizontal);
+    playerBoard->draw(window, font, cursorR, cursorC, true, size, placingHorizontal, valid);
+    
+    drawText("Waswe pole", 50 + BOARD_PIXELS / 2, 55, 18, TEXT_GOLD, true);
+    
+    float panelX = 50 + BOARD_PIXELS + 60;
+    sf::RectangleShape panel(sf::Vector2f(300, 500));
+    panel.setPosition(panelX, 80);
+    panel.setFillColor(PANEL_BG);
+    panel.setOutlineColor(GRID_LINE);
+    panel.setOutlineThickness(1);
+    window.draw(panel);
+    
+    drawText("Korablx:", panelX + 20, 100, 22, TEXT, false);
+    drawText(std::to_string(size) + "-palubnyj", panelX + 20, 130, 26, TEXT_GOLD, false);
+    
+    drawText("Naprawlenie:", panelX + 20, 180, 20, TEXT, false);
+    drawText(placingHorizontal ? ">>> GORIZONTALxNO" : "vvv WERTIKALxNO",
+             panelX + 20, 210, 20, sf::Color(100, 200, 255), false);
+    
+    if (valid) {
+        drawText("[OK] Moshno stawitx", panelX + 20, 260, 20, sf::Color(50, 200, 80), false);
+    } else {
+        drawText("[X] Mesto zanjato!", panelX + 20, 260, 20, sf::Color(255, 80, 80), false);
+    }
+    
+    drawText("Uprawlenie:", panelX + 20, 320, 18, sf::Color(150, 150, 170), false);
+    drawText("Strelki - dwinhenie", panelX + 20, 350, 18, sf::Color(150, 150, 170), false);
+    drawText("PROBEL - poworot", panelX + 20, 380, 18, sf::Color(150, 150, 170), false);
+    drawText("ENTER - postawitx", panelX + 20, 410, 18, sf::Color(150, 150, 170), false);
+    drawText("ESC - menu", panelX + 20, 440, 18, sf::Color(150, 150, 170), false);
+    
+    drawText(std::to_string(currentShipIdx) + " / " + std::to_string(FLEET_COUNT),
+             panelX + 20, 500, 24, TEXT_GOLD, false);
+    
+    drawText("Ostalosx:", panelX + 20, 540, 18, sf::Color(150, 150, 170), false);
+    for (int i = currentShipIdx; i < FLEET_COUNT; i++) {
+        std::string bar = "[" + std::string(FLEET_SIZES[i], '=') + "]";
+        drawText(bar, panelX + 20, 565 + (i - currentShipIdx) * 22, 18,
+                 sf::Color(100, 180, 255), false);
+    }
+}
+
+void Game::startBattle() {
+    state = GameState::Battle;
+    cursorR = 0; cursorC = 0;
+    botThinking = false;
+}
+
+void Game::renderBattle() {
+    drawText("BOJ S BOTOM", WINDOW_WIDTH / 2, 15, 24, TEXT_GOLD, true);
+    
+    enemyBoard->draw(window, font, cursorR, cursorC, false, 0, true, true);
+    drawText("Pole wraga", 580 + BOARD_PIXELS / 2, 55, 18,
+             sf::Color(255, 100, 100), true);
+    
+    playerBoard->draw(window, font, -1, -1, true, 0, true, true);
+    drawText("Waswe pole", 50 + BOARD_PIXELS / 2, 55, 18,
+             sf::Color(100, 255, 100), true);
+    
+    sf::RectangleShape infoPanel(sf::Vector2f(200, 120));
+    infoPanel.setPosition(50, 580);
+    infoPanel.setFillColor(PANEL_BG);
+    infoPanel.setOutlineColor(GRID_LINE);
+    infoPanel.setOutlineThickness(1);
+    window.draw(infoPanel);
+    
+    drawText("Wrag: " + std::to_string(enemyBoard->getShipsAlive()) + " kor.",
+             70, 590, 18, sf::Color(255, 100, 100), false);
+    drawText("Wy: " + std::to_string(playerBoard->getShipsAlive()) + " kor.",
+             70, 620, 18, sf::Color(100, 255, 100), false);
+    drawText("Strelki | ENTER | ESC",
+             70, 650, 16, sf::Color(150, 150, 170), false);
+    
+    drawText("Prizel: " + std::string(1, 'A' + cursorC) + std::to_string(cursorR + 1),
+             580, 580, 20, TEXT_GOLD, false);
+}
+
+void Game::renderBotTurn() {
+    renderBattle();
+    
+    sf::RectangleShape overlay(sf::Vector2f(WINDOW_WIDTH, WINDOW_HEIGHT));
+    overlay.setFillColor(sf::Color(0, 0, 0, 120));
+    window.draw(overlay);
+    
+    drawText("BOT DUMAET...", WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 36,
+             sf::Color(255, 200, 50), true);
+    
+    int dots = (int)(botTimer * 3) % 4;
+    std::string dotStr(dots, '.');
+    drawText(dotStr, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2 + 40, 30,
+             sf::Color(255, 200, 50), true);
+}
+
+void Game::renderVictory() {
+    sf::RectangleShape overlay(sf::Vector2f(WINDOW_WIDTH, WINDOW_HEIGHT));
+    overlay.setFillColor(sf::Color(0, 30, 0, 180));
+    window.draw(overlay);
+    
+    drawText("WY POBERDILI!", WINDOW_WIDTH / 2, 250, 56,
+             sf::Color(50, 255, 100), true);
+    drawText("Flot protiwnika unihtowen!", WINDOW_WIDTH / 2, 330, 24, TEXT, true);
+    drawText("ENTER - menu | ESC - wyhod", WINDOW_WIDTH / 2, 450, 20, TEXT_GOLD, true);
+}
+
+void Game::renderDefeat() {
+    sf::RectangleShape overlay(sf::Vector2f(WINDOW_WIDTH, WINDOW_HEIGHT));
+    overlay.setFillColor(sf::Color(30, 0, 0, 180));
+    window.draw(overlay);
+    
+    drawText("WY PROIGRALI...", WINDOW_WIDTH / 2, 250, 56,
+             sf::Color(255, 50, 50), true);
+    drawText("Waw flot potoplen.", WINDOW_WIDTH / 2, 330, 24, TEXT, true);
+    drawText("ENTER - menu | ESC - wyhod", WINDOW_WIDTH / 2, 450, 20, TEXT_GOLD, true);
+}
+
+void Game::drawText(const std::string& text, float x, float y, int size,
+                    sf::Color color, bool center) {
+    sf::Text t(text, font, size);
+    t.setFillColor(color);
+    if (center) {
+        sf::FloatRect bounds = t.getLocalBounds();
+        t.setOrigin(bounds.width / 2, 0);
+    }
+    t.setPosition(x, y);
+    window.draw(t);
+}
+
+void Game::drawButton(const std::string& text, float x, float y, float w, float h,
+                      bool hovered, bool selected) {
+    sf::RectangleShape button(sf::Vector2f(w, h));
+    button.setPosition(x, y);
+    
+    sf::Color fillColor = selected ? BUTTON_HOVER : BUTTON;
+    if (hovered) fillColor = BUTTON_HOVER;
+    
+    button.setFillColor(fillColor);
+    button.setOutlineColor(selected ? sf::Color::Yellow : sf::Color(100, 160, 220));
+    button.setOutlineThickness(selected ? 3 : 2);
+    window.draw(button);
+    
+    sf::Text label(text, font, 24);
+    label.setFillColor(BUTTON_TEXT);
+    sf::FloatRect bounds = label.getLocalBounds();
+    label.setOrigin(bounds.width / 2, bounds.height / 2);
+    label.setPosition(x + w / 2, y + h / 2 - 5);
+    window.draw(label);
+}
+
+bool Game::isMouseOver(float x, float y, float w, float h) const {
+    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+    return mousePos.x >= x && mousePos.x <= x + w &&
+           mousePos.y >= y && mousePos.y <= y + h;
+}
+
+void Game::playHitSound() {}
+
+void Game::playMissSound() {}
+
+void Game::resetGame() {
+    playerBoard->clear();
+    enemyBoard->clear();
+    cursorR = 0; cursorC = 0;
+    currentShipIdx = 0;
+    menuSelection = 0;
+}

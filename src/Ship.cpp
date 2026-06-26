@@ -1,1 +1,58 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIFNoaXAuY3BwIC0g0KDQsNCx0L7RgtCw0L3QvdGL0YUg0LrQvtC80LzQtdC90YLQsCDQutC+0YLQvtGA0YvQuQovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiNpbmNsdWRlICJTaGlwLmhwcCIKCnVzaW5nIG5hbWVzcGFjZSBDb2xvcnM7CgpTaGlwOjpTaGlwKGludCBzdGFydFIsIGludCBzdGFydEMsIGludCBzaXplLCBib29sIGhvcml6b250YWwpCiAgICA6IHNpemUoc2l6ZSksIGhvcml6b250YWwoaG9yaXpvbnRhbCkgewogICAgZm9yIChpbnQgaSA9IDA7IGkgPCBzaXplOyBpKyspIHsKICAgICAgICBTaGlwUGFydCBwOwogICAgICAgIGlmIChob3Jpem9udGFsKSB7IHAuciA9IHN0YXJ0UjsgcC5jID0gc3RhcnRDICsgaTsgfQogICAgICAgIGVsc2UgICAgICAgICAgICB7IHAuciA9IHN0YXJ0UiArIGk7IHAuYyA9IHN0YXJ0QzsgfQogICAgICAgIHAuc3RhdGUgPSBQYXJ0U3RhdGU6OkludGFjdDsKICAgICAgICBwYXJ0cy5wdXNoX2JhY2socCk7CiAgICB9Cn0KCmJvb2wgU2hpcDo6aHVuY2hlcyhpbnQgciwgaW50IGMpIGNvbnN0IHsKICAgIGZvciAoY29uc3QgYXV0byYgcCA6IHBhcnRzKSB7CiAgICAgICAgaWYgKHAuciA9PSByICYmIHAuYyA9PSBjKSByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIHJldHVybiBmYWxzZTsKfQoKYm9vbCBTaGlwOmlzU3VuaygpIGNvbnN0IHsKICAgIGZvciAoY29uc3QgYXV0byYgcCA6IHBhcnRzKSB7CiAgICAgICAgaWYgKHAuc3RhdGUgPT0gUGFydFN0YXRlOjpJbnRhY3QpIHJldHVybiBmYWxzZTsKICAgIH0KICAgIHJldHVybiB0cnVlOwp9Cgpjb25zdCBTaGlwUGFydCYgU2hpcDo6Z2V0UGFydChpbnQgaWR4KSBjb25zdCB7CiAgICByZXR1cm4gcGFydHNbaWR4XTsKfQoKdm9pZCBTaGlwOjpkcmF3KHNmOjpSZW5kZXJXaW5kb3cmIHdpbmRvdywgZmxvYXQgb2Zmc2V0WCwgZmxvYXQgb2Zmc2V0WSwgCiAgICAgICAgICAgICAgZmxvYXQgY2VsbFNpemUsIGJvb2wgc2hvd1NoaXBzLCBib29sIGlzRW5lbXkpIGNvbnN0IHsKICAgIGlmICghaXNFbmVteSB8fCBzaG93U2hpcHMgfHwgaXNTdW5rKCkpIHsKICAgICAgICBmb3IgKGNvbnN0IGF1dG8mIHBhcnQgOiBwYXJ0cykgewogICAgICAgICAgICBmbG9hdCB4ID0gb2Zmc2V0WCArIHBhcnQuYyAqIChjZWxsU2l6ZSArIENFTExfTUFSR0lOKTsKICAgICAgICAgICAgZmxvYXQgeSA9IG9mZnNldFkgKyBwYXJ0LnIgKiAoY2VsbFNpemUgKyBDRUxMX01BUkdJTik7CiAgICAgICAgICAgIAogICAgICAgICAgICBzZjo6UmVjdGFuZ2xlU2hhcGUgcGFydFNoYXBlOwogICAgICAgICAgICBwYXJ0U2hhcGUuc2V0U2l6ZShzZjpWZWN0b3IyZihjZWxsU2l6ZSAtIDIsIGNlbGxTaXplIC0gMikpOwogICAgICAgICAgICBwYXJ0U2hhcGUuc2V0UG9zaXRpb24oeCArIDEsIHkgKyAxKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIGlmIChwYXJ0LnN0YXRlID09IFBhcnRTdGF0ZTo6RGFtYWdlZCkgewogICAgICAgICAgICAgICAgcGFydFNoYXBlLnNldEZpbGxDb2xvcihTSElQX0hJVCk7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICBwYXJ0U2hhcGUuc2V0RmlsbENvbG9yKFNISVApOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICB3aW5kb3cuZHJhdyhwYXJ0U2hhcGUpOwogICAgICAgIH0KICAgIH0KfQo=
+// ============================================================================
+// Ship.cpp - Реализация корабля
+// ============================================================================
+
+#include "Ship.hpp"
+
+using namespace Colors;
+
+Ship::Ship(int startR, int startC, int size, bool horizontal)
+    : size(size), horizontal(horizontal) {
+    for (int i = 0; i < size; i++) {
+        ShipPart p;
+        if (horizontal) { p.r = startR; p.c = startC + i; }
+        else            { p.r = startR + i; p.c = startC; }
+        p.state = PartState::Intact;
+        parts.push_back(p);
+    }
+}
+
+bool Ship::hunches(int r, int c) const {
+    for (const auto& p : parts) {
+        if (p.r == r && p.c == c) return true;
+    }
+    return false;
+}
+
+bool Ship::isSunk() const {
+    for (const auto& p : parts) {
+        if (p.state == PartState::Intact) return false;
+    }
+    return true;
+}
+
+const ShipPart& Ship::getPart(int idx) const {
+    return parts[idx];
+}
+
+void Ship::draw(sf::RenderWindow& window, float offsetX, float offsetY, 
+                float cellSize, bool showShips, bool isEnemy) const {
+    if (!isEnemy || showShips || isSunk()) {
+        for (const auto& part : parts) {
+            float x = offsetX + part.c * (cellSize + CELL_MARGIN);
+            float y = offsetY + part.r * (cellSize + CELL_MARGIN);
+            
+            sf::RectangleShape partShape;
+            partShape.setSize(sf::Vector2f(cellSize - 2, cellSize - 2));
+            partShape.setPosition(x + 1, y + 1);
+            
+            if (part.state == PartState::Damaged) {
+                partShape.setFillColor(SHIP_HIT);
+            } else {
+                partShape.setFillColor(SHIP);
+            }
+            
+            window.draw(partShape);
+        }
+    }
+}

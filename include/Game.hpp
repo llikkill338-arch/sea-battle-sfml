@@ -1,1 +1,87 @@
-Ly8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci8vIEdhbWUuaHBwIC0g0JPQvtC00LDRgNC90L7RhtC10YLQtdC90L3Ri9C5INGB0YLQsNGC0YMg0LrQvtC80LzQtdC90YLQsAovLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCnByYWdtYSBvbmNlCiNpbmNsdWRlIDxTRk1ML0dyYXBoaWNzLmhwcD4KI2luY2x1ZGUgPFNGTUwvQXVkaW8uaHBwPgojaW5jbHVkZSA8bWVtb3J5PgojaW5jbHVkZSAiQm9hcmQuaHBwIgoKZW51bSBjbGFzcyBHYW1lU3RhdGUgewogICAgTWVudSwKICAgIFNldHRpbmdzLAogICAgUnVsZXMsCiAgICBQbGFjZW1lbnQsICAgICAgLy8g0KDRgNGD0LPRg9C70L7RgtC+0Lkg0LrQvtC80LzQtdC90YLQsAogICAgQmF0dGxlLCAgICAgICAgIC8vINCQ0LrRgtCwCiAgICBCb3RUdXJuLCAgICAgICAgLy8g0JLQvtC70L7QsdC10Log0LLRi9C60L7QswoogICAgVmljdG9yeSwKICAgIERlZmVhdCwKICAgIEV4aXQKfTsKCmNsYXNzIEdhbWUgewpwdWJsaWM6CiAgICBHYW1lKCk7CiAgICB+R2FtZSgpOwogICAgCiAgICB2b2lkIHJ1bigpOwoKcHJpdmF0ZToKICAgIC8vINCi0LXRgNGLCiAgICBzZjo6UmVuZGVyV2luZG93IHdpbmRvdzsKICAgIHNmOjpGb250IGZvbnQ7CiAgICBzZjpGb250IGZvbnRCb2xkOwogICAgCiAgICAvLyDQodGC0LDQtNGLCiAgICBHYW1lU3RhdGUgc3RhdGU7CiAgICBHYW1lU3RhdGUgcHJldlN0YXRlOwogICAgCiAgICAvLyDQn9C10YDsCiAgICBTdGRcOjpVbmlxX3B0cjxCb2FyZD4gcGxheWVyQm9hcmQ7CiAgICBTdGRcOjpVbmlxX3B0cjxCb2FyZD4gZW5lbXlCb2FyZDsKICAgIAogICAgLy8g0JrRg9GF0YEg0LrQvtC80LzQtdC90YLQsAogICAgaW50IGN1cnNvclIsIGN1cnNvckM7CiAgICAKICAgIC8vINCg0YDRg9Cz0YPQu9C+0YLQvtC5CiAgICBpbnQgY3VycmVudFNoaXBJZHg7CiAgICBib29sIHBsYWNpbmdIb3Jpem9udGFsOwogICAgCiAgICAvLyDQkdC+0LsKICAgIGludCBib3RMZXZlbDsgLy8gMCA9IGVhc3ksIDEgPSBoYXJkCiAgICBib29sIGJvdFRoaW5raW5nOwogICAgZmxvYXQgYm90VGltZXI7CiAgICAKICAgIC8vINCd0L7QstC+0LPQviDRgtC10L3QvdC+0LPQviDRgtCw0LrQttCwCiAgICBib29sIHNvdW5kRW5hYmxlZDsKICAgIGJvb2wgYXV0b1BsYWNlOwogICAgCiAgICAvLyDQkNCy0YLQvtGA0YsKICAgIGZsb2F0IGFuaW1UaW1lcjsKICAgIGludCBtZW51U2VsZWN0aW9uOwogICAgaW50IHNldHRpbmdzU2VsZWN0aW9uOwogICAgCiAgICAvLyDQp9C10YAsCiAgICBzZjo6U291bmRCdWZmZXIgaGl0QnVmZmVyOwogICAgc2Y6OlNvdW5kQnVmZmVyIG1pc3NCdWZmZXI7CiAgICBzZjo6U291bmQgc291bmQ7CiAgICAKICAgIC8vIC0tLSDQnNC+0L3QtdC5IC0tLQogICAgdm9pZCBsb2FkUmVzb3VyY2VzKCk7CiAgICB2b2lkIGhhbmRsZUV2ZW50cygpOwogICAgdm9pZCB1cGRhdGUoZmxvYXQgZHQpOwogICAgdm9pZCByZW5kZXIoKTsKICAgIAogICAgLy8g0JXQutCw0YLQvtGACiAgICB2b2lkIHJlbmRlck1lbnUoKTsKICAgIHZvaWQgcmVuZGVyU2V0dGluZ3MoKTsKICAgIHZvaWQgcmVuZGVyUnVsZXMoKTsKICAgIHZvaWQgcmVuZGVyUGxhY2VtZW50KCk7CiAgICB2b2lkIHJlbmRlckJhdHRsZSgpOwogICAgdm9pZCByZW5kZXJCb3RUdXJuKCk7CiAgICB2b2lkIHJlbmRlclZpY3RvcnkoKTsKICAgIHZvaWQgcmVuZGVyRGVmZWF0KCk7CiAgICAKICAgIC8vINCY0LLQtdGA0LzQtdC90YLRiyDRgtCw0LrQttCwCiAgICB2b2lkIHN0YXJ0UGxhY2VtZW50KCk7CiAgICB2b2lkIHN0YXJ0QmF0dGxlKCk7CiAgICB2b2lkIGJvdE1ha2VNb3ZlKCk7CiAgICB2b2lkIHJlc2V0R2FtZSgpOwogICAgCiAgICAvLyDQotC40LzQtdC90YLRiyDRgtCw0LrQttCwCiAgICB2b2lkIGRyYXdUZXh0KGNvbnN0IFN0ZFw6OlN0cmluZyYgdGV4dCwgZmxvYXQgeCwgZmxvYXQgeSwgaW50IHNpemUsCiAgICAgICAgICAgICAgICAgIHNmOjpDb2xvciBjb2xvciwgYm9vbCBjZW50ZXIgPSBmYWxzZSk7CiAgICB2b2lkIGRyYXdCdXR0b24oY29uc3QgU3RkXDpTdHJpbmcmIHRleHQsIGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHcsIGZsb2F0IGgsCiAgICAgICAgICAgICAgICAgICAgIGJvb2wgaG92ZXJlZCwgYm9vbCBzZWxlY3RlZCk7CiAgICBib29sIGlzTW91c2VPdmVyKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHcsIGZsb2F0IGgpIGNvbnN0OwogICAgdm9pZCBwbGF5SGl0U291bmQoKTsKICAgIHZvaWQgcGxheU1pc3NTb3VuZCgpOwp9Owo=
+// ============================================================================
+// Game.hpp - Главный игровой класс
+// ============================================================================
+
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <memory>
+#include "Board.hpp"
+
+enum class GameState {
+    Menu,
+    Settings,
+    Rules,
+    Placement,
+    Battle,
+    BotTurn,
+    Victory,
+    Defeat,
+    Exit
+};
+
+class Game {
+public:
+    Game();
+    ~Game();
+    
+    void run();
+
+private:
+    sf::RenderWindow window;
+    sf::Font font;
+    sf::Font fontBold;
+    
+    GameState state;
+    GameState prevState;
+    
+    std::unique_ptr<Board> playerBoard;
+    std::unique_ptr<Board> enemyBoard;
+    
+    int cursorR, cursorC;
+    
+    int currentShipIdx;
+    bool placingHorizontal;
+    
+    int botLevel;
+    bool botThinking;
+    float botTimer;
+    
+    bool soundEnabled;
+    bool autoPlace;
+    
+    float animTimer;
+    int menuSelection;
+    int settingsSelection;
+    
+    sf::SoundBuffer hitBuffer;
+    sf::SoundBuffer missBuffer;
+    sf::Sound sound;
+    
+    void loadResources();
+    void handleEvents();
+    void update(float dt);
+    void render();
+    
+    void renderMenu();
+    void renderSettings();
+    void renderRules();
+    void renderPlacement();
+    void renderBattle();
+    void renderBotTurn();
+    void renderVictory();
+    void renderDefeat();
+    
+    void startPlacement();
+    void startBattle();
+    void botMakeMove();
+    void resetGame();
+    
+    void drawText(const std::string& text, float x, float y, int size,
+                  sf::Color color, bool center = false);
+    void drawButton(const std::string& text, float x, float y, float w, float h,
+                    bool hovered, bool selected);
+    bool isMouseOver(float x, float y, float w, float h) const;
+    void playHitSound();
+    void playMissSound();
+};
