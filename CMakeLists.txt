@@ -4,16 +4,32 @@ project(SeaBattleSFML VERSION 2.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# === ПУТЬ К SFML ===
-set(SFML_DIR "C:/Users/User/Desktop/SFML-2.6.1/lib/cmake/SFML" CACHE PATH "Path to SFML cmake config")
+# MSVC UTF-8 FIX: /utf-8 flag ensures Unicode strings compile correctly
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
+
+# Set SFML path
+set(SFML_DIR "C:/Users/User/Desktop/SFML-2.6.1/lib/cmake/SFML")
 
 find_package(SFML 2.6 COMPONENTS graphics window system audio REQUIRED)
 
-# Исходные файлы
-file(GLOB SOURCES "src/*.cpp")
-file(GLOB HEADERS "include/*.hpp")
+set(SOURCES
+    src/main.cpp
+    src/Game.cpp
+    src/Board.cpp
+    src/Cell.cpp
+    src/Ship.cpp
+)
 
-# Создаём .exe
+set(HEADERS
+    include/Game.hpp
+    include/Board.hpp
+    include/Cell.hpp
+    include/Ship.hpp
+    include/Constants.hpp
+)
+
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
@@ -25,16 +41,9 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     sfml-audio
 )
 
-# Копируем assets в папку сборки
+# Copy assets to output directory after build
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets
+    "${CMAKE_SOURCE_DIR}/assets"
+    "$<TARGET_FILE_DIR:${PROJECT_NAME}>/assets"
 )
-
-# Windows: копируем SFML DLLs
-if(WIN32)
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${SFML_DIR}/../../bin $<TARGET_FILE_DIR:${PROJECT_NAME}>
-    )
-endif()
