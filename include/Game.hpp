@@ -1,24 +1,26 @@
 // ============================================================================
-// Game.hpp - Главный игровой класс
+// Game.hpp - Главный игровой класс (v4.0 Pirate Edition)
 // ============================================================================
 
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 #include <memory>
 #include <vector>
+#include <string>
 #include "Board.hpp"
 
-enum class GameState {
-    Menu,
-    Settings,
-    Rules,
-    Placement,
-    Battle,
-    BotTurn,
-    Victory,
-    Defeat,
-    Exit
+enum class GameState { Menu, Settings, Rules, Placement, Battle, BotTurn, Victory, Defeat, Exit };
+
+struct BattleMessage {
+    std::string text;
+    float timer;
+    sf::Color color;
+};
+
+struct ExplosionEffect {
+    float x, y;
+    float timer;
+    float scale;
 };
 
 class Game {
@@ -30,47 +32,44 @@ public:
 private:
     sf::RenderWindow window;
     sf::Font font;
-    sf::Font fontBold;
 
     GameState state;
-    GameState prevState;
-
     std::unique_ptr<Board> playerBoard;
     std::unique_ptr<Board> enemyBoard;
 
-    int cursorR, cursorC;
-    int currentShipIdx;
+    int cursorR, cursorC, currentShipIdx;
     bool placingHorizontal;
-
     int botLevel;
     bool botThinking;
     float botTimer;
-
-    bool soundEnabled;
-    bool autoPlace;
-    bool fullscreen;
-    bool playerTurnFirst;
-
+    bool soundEnabled, autoPlace, fullscreen, playerTurnFirst;
     float animTimer;
-    int menuSelection;
-    int settingsSelection;
+    int menuSelection, settingsSelection;
 
-    // Bot AI state for hard mode
+    // Bot AI
     std::vector<std::pair<int,int>> botTargets;
     int botDirIndex;
     bool botHunting;
 
-    sf::SoundBuffer hitBuffer;
-    sf::SoundBuffer missBuffer;
-    sf::Sound sound;
+    // Pirate sprites
+    sf::Texture texFrigate, texSkeleton, texTreasure, texPalms, texExplosion;
+    sf::Sprite sprFrigate, sprSkeleton, sprTreasure, sprPalms, sprExplosion;
+    bool spritesLoaded;
+
+    // Effects
+    std::vector<BattleMessage> messages;
+    std::vector<ExplosionEffect> explosions;
+    float messageTimer;
+    std::string lastMessage;
 
     void loadResources();
+    bool loadTexture(sf::Texture& tex, const std::string& path);
     void handleEvents();
     void update(float dt);
     void render();
-
     void applyFullscreen();
 
+    // Render screens
     void renderMenu();
     void renderSettings();
     void renderRules();
@@ -80,19 +79,24 @@ private:
     void renderVictory();
     void renderDefeat();
 
+    // Game logic
     void startPlacement();
     void startBattle();
     void botMakeMove();
     void resetGame();
+    void addMessage(const std::string& text, sf::Color color);
+    void addExplosion(float x, float y);
 
-    void drawText(const std::string& text, float x, float y, int size,
-                  sf::Color color, bool center = false);
-    void drawButton(const std::string& text, float x, float y, float w, float h,
-                    bool hovered, bool selected);
-    bool isMouseOver(float x, float y, float w, float h) const;
-    void playHitSound();
-    void playMissSound();
-
-    // UTF-8 helpers
+    // Drawing helpers
+    void drawText(const std::string& text, float x, float y, int size, sf::Color color, bool center);
+    void drawButton(const std::string& text, float x, float y, float w, float h, bool hovered, bool selected);
+    void drawDecorations();
+    void drawInfoPanel();
     sf::String toUtf8(const std::string& text) const;
+
+    // Pirate phrases
+    std::string getRandomHitPhrase() const;
+    std::string getRandomMissPhrase() const;
+    std::string getRandomSunkPhrase() const;
+    std::string getRandomBotHitPhrase() const;
 };

@@ -1,5 +1,5 @@
 // ============================================================================
-// Ship.hpp - Корабль
+// Ship.hpp - Пиксельный пиратский корабль
 // ============================================================================
 
 #pragma once
@@ -7,10 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Constants.hpp"
 
-enum class PartState {
-    Intact,
-    Damaged
-};
+enum class PartState { Intact, Damaged };
 
 struct ShipPart {
     int r, c;
@@ -22,7 +19,7 @@ public:
     Ship(int startR, int startC, int size, bool horizontal);
 
     bool contains(int r, int c) const;
-    bool hunches(int r, int c) const;
+    bool hitPart(int r, int c);  // NEW: marks part as damaged, returns true if hit
     bool isSunk() const;
     int getSize() const { return size; }
     bool isHorizontal() const { return horizontal; }

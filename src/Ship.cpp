@@ -1,5 +1,5 @@
 // ============================================================================
-// Ship.cpp - Реализация корабля
+// Ship.cpp - Пиксельный пиратский корабль
 // ============================================================================
 
 #include "Ship.hpp"
@@ -18,16 +18,16 @@ Ship::Ship(int startR, int startC, int size, bool horizontal)
 }
 
 bool Ship::contains(int r, int c) const {
-    for (const auto& p : parts) {
+    for (const auto& p : parts)
         if (p.r == r && p.c == c) return true;
-    }
     return false;
 }
 
-bool Ship::hunches(int r, int c) const {
-    for (const auto& p : parts) {
-        if (p.r == r && p.c == c) {
-            const_cast<ShipPart&>(p).state = PartState::Damaged;
+// NEW: Properly mark part as damaged (no const_cast hack)
+bool Ship::hitPart(int r, int c) {
+    for (auto& p : parts) {
+        if (p.r == r && p.c == c && p.state == PartState::Intact) {
+            p.state = PartState::Damaged;
             return true;
         }
     }
@@ -35,9 +35,8 @@ bool Ship::hunches(int r, int c) const {
 }
 
 bool Ship::isSunk() const {
-    for (const auto& p : parts) {
+    for (const auto& p : parts)
         if (p.state == PartState::Intact) return false;
-    }
     return true;
 }
 
@@ -61,7 +60,6 @@ void Ship::draw(sf::RenderWindow& window, float offsetX, float offsetY,
             } else {
                 partShape.setFillColor(SHIP);
             }
-
             window.draw(partShape);
         }
     }
