@@ -1,14 +1,15 @@
 // ============================================================================
-// Game.cpp - Главный игровой класс (Russian UTF-8 + Fullscreen + Fixed UI)
+// Game.cpp - Главный игровой класс (v3.0 - Fixed Layout + Aura + Smart Bot)
 // ============================================================================
 
 #include "Game.hpp"
 #include <iostream>
 #include <cmath>
+#include <ctime>
 
 using namespace Colors;
 
-// All Russian text uses u8"\uXXXX" to guarantee UTF-8 encoding
+// ===== Russian Text Macros (UTF-8 guaranteed via u8 prefix) =====
 #define RU_MORSKOY_BOY      u8"\u041C\u043E\u0440\u0441\u043A\u043E\u0439 \u0411\u043E\u0439"
 #define RU_KONSOL_BOY       u8"\u041A\u043E\u043D\u0441\u043E\u043B\u044C\u043D\u044B\u0439 \u0431\u043E\u0439 v2.0"
 #define RU_NACHAT_IGRU      u8"\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443"
@@ -30,17 +31,18 @@ using namespace Colors;
 #define RU_PRAVILA_IGRY     u8"\u041F\u0420\u0410\u0412\u0418\u041B\u0410 \u0418\u0413\u0420\u042B"
 #define RU_TSEL             u8"\u0426\u0435\u043B\u044C: \u043F\u043E\u0442\u043E\u043F\u0438\u0442\u044C \u0432\u0435\u0441\u044C \u0444\u043B\u043E\u0442 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430."
 #define RU_FLOT_10          u8"\u0424\u043B\u043E\u0442 (10 \u043A\u043E\u0440\u0430\u0431\u043B\u0435\u0439):"
-#define RU_1X4_AVI          u8"  1 x 4-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0439 (\u0430\u0432\u0438\u0430\u043D\u043E\u0441\u0435\u0446)"
-#define RU_2X3_KREY         u8"  2 x 3-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0445 (\u043A\u0440\u0435\u0439\u0441\u0435\u0440\u0430)"
-#define RU_3X2_ESM          u8"  3 x 2-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0445 (\u044D\u0441\u043C\u0438\u043D\u0446\u0430)"
-#define RU_4X1_MIN          u8"  4 x 1-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0445 (\u043C\u0438\u043D\u043E\u043D\u043E\u0441\u0446\u0430)"
+#define RU_1X4_AVI          u8"  1 x 4-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0439 (\u041B\u0438\u043D\u043A\u043E\u0440)"
+#define RU_2X3_KREY         u8"  2 x 3-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0445 (\u041A\u0440\u0435\u0439\u0441\u0435\u0440\u0430)"
+#define RU_3X2_ESM          u8"  3 x 2-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0445 (\u042D\u0441\u043C\u0438\u043D\u0446\u0430)"
+#define RU_4X1_MIN          u8"  4 x 1-\u043F\u0430\u043B\u0443\u0431\u043D\u044B\u0445 (\u0422\u043E\u0440\u043F. \u043A\u0430\u0442\u0435\u0440\u0430)"
 #define RU_UPRAVLENIE       u8"\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435:"
-#define RU_STRELKI_PEREM    u8"  \u0421\u0442\u0440\u0435\u043B\u043A\u0438 - \u043F\u0435\u0440\u0435\u043C\u0435\u0449\u0435\u043D\u0438\u0435 \u043F\u0440\u0438\u0446\u0435\u043B\u0430"
-#define RU_ENTER_STREL      u8"  ENTER   - \u0432\u044B\u0441\u0442\u0440\u0435\u043B / \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043A\u043E\u0440\u0430\u0431\u043B\u044C"
-#define RU_PROBEL_POVOROT   u8"  \u041F\u0420\u041E\u0411\u0415\u041B  - \u043F\u043E\u0432\u043E\u0440\u043E\u0442 \u043A\u043E\u0440\u0430\u0431\u043B\u044F (\u0433\u043E\u0440\u0438\u0437/\u0432\u0435\u0440\u0442)"
+#define RU_STRELKI_PEREM    u8"  \u0421\u0442\u0440\u0435\u043B\u043A\u0438 - \u043F\u0435\u0440\u0435\u043C\u0435\u0449\u0435\u043D\u0438\u0435 \u043A\u0443\u0440\u0441\u043E\u0440\u0430"
+#define RU_ENTER_STREL      u8"  ENTER   - \u0432\u044B\u0441\u0442\u0440\u0435\u043B / \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C"
+#define RU_PROBEL_POVOROT   u8"  \u041F\u0420\u041E\u0411\u0415\u041B  - \u043F\u043E\u0432\u043E\u0440\u043E\u0442 (\u0433\u043E\u0440\u0438\u0437/\u0432\u0435\u0440\u0442)"
 #define RU_ESC_MENU         u8"  ESC     - \u043C\u0435\u043D\u044E / \u0432\u044B\u0445\u043E\u0434"
-#define RU_DOP_HOD          u8"\u041F\u0440\u0438 \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0438 - \u0434\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u0445\u043E\u0434."
-#define RU_POBEDITEL        u8"\u041F\u043E\u0431\u0435\u0436\u0434\u0430\u0435\u0442 \u0442\u043E\u0442, \u043A\u0442\u043E \u043F\u0435\u0440\u0432\u044B\u043C \u043F\u043E\u0442\u043E\u043F\u0438\u0442 \u0444\u043B\u043E\u0442!"
+#define RU_DOP_HOD          u8"\u041F\u0440\u0438 \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0438 - \u0435\u0449\u0451 \u0445\u043E\u0434!"
+#define RU_POBEDITEL        u8"\u041F\u043E\u0431\u0435\u0436\u0434\u0430\u0435\u0442 \u0442\u043E\u0442, \u043A\u0442\u043E \u043F\u0435\u0440\u0432\u044B\u043C \u043F\u043E\u0442\u043E\u043F\u0438\u0442 20 \u043F\u0430\u043B\u0443\u0431!"
+#define RU_AVTOVYCHEK       u8"\u0410\u0432\u0442\u043E\u0432\u044B\u0447\u0435\u0440\u043A\u0438\u0432\u0430\u043D\u0438\u0435: \u043F\u0440\u0438 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u0438\u0438 \u043E\u0440\u0435\u043E\u043B \u043F\u043E\u043C\u0435\u0447\u0430\u0435\u0442\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438."
 #define RU_NAZHMI_ENTER_ESC u8"\u041D\u0430\u0436\u043C\u0438\u0442\u0435 ENTER \u0438\u043B\u0438 ESC \u0434\u043B\u044F \u0432\u044B\u0445\u043E\u0434\u0430..."
 #define RU_RASSTANOVKA_KOR  u8"\u0420\u0410\u0421\u0421\u0422\u0410\u041D\u041E\u0412\u041A\u0410 \u041A\u041E\u0420\u0410\u0411\u041B\u0415\u0419"
 #define RU_VASHE_POLE       u8"\u0412\u0430\u0448\u0435 \u043F\u043E\u043B\u0435"
@@ -64,13 +66,27 @@ using namespace Colors;
 #define RU_PRITSEL          u8"\u041F\u0440\u0438\u0446\u0435\u043B: "
 #define RU_BOT_DUMAET       u8"\u0411\u041E\u0422 \u0414\u0423\u041C\u0410\u0415\u0422..."
 #define RU_VY_POBEHDILI     u8"\u0412\u042B \u041F\u041E\u0411\u0415\u0414\u0418\u041B\u0418!"
-#define RU_FLOT_UNICHTOZHEN u8"\u0424\u043B\u043E\u0442 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D!"
+#define RU_FLOT_UNICHTOZHEN u8"\u0412\u0441\u0435 \u043A\u043E\u0440\u0430\u0431\u043B\u0438 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u044B!"
 #define RU_ENTER_MENU       u8"ENTER - \u043C\u0435\u043D\u044E | ESC - \u0432\u044B\u0445\u043E\u0434"
 #define RU_VY_PROIGRALI     u8"\u0412\u042B \u041F\u0420\u041E\u0418\u0413\u0420\u0410\u041B\u0418..."
-#define RU_VASH_FLOT_POTOP  u8"\u0412\u0430\u0448 \u0444\u043B\u043E\u0442 \u043F\u043E\u0442\u043E\u043F\u043B\u0435\u043D."
+#define RU_VASH_FLOT_POTOP  u8"\u0412\u0430\u0448 \u0444\u043B\u043E\u0442 \u0440\u0430\u0437\u0431\u0438\u0442!"
 #define RU_STRELKI_VYBOR    u8"\u0421\u0442\u0440\u0435\u043B\u043A\u0438 ^/v - \u0432\u044B\u0431\u043E\u0440 | ENTER - \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C"
 #define RU_SFML_VER         u8"SFML v2.0 | C++17"
 #define RU_IZMENIT          u8"</> - \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C | ENTER/ESC - \u043D\u0430\u0437\u0430\u0434"
+#define RU_PERVYY_HOD       u8"\u041F\u0435\u0440\u0432\u044B\u0439 \u0445\u043E\u0434: "
+#define RU_VY_HODITE        u8"\u0412\u044B"
+#define RU_BOT_HODIT        u8"\u0411\u041E\u0422"
+#define RU_PALKI            u8"\u041F\u0430\u043B\u0443\u0431 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u043E: "
+
+// ===== Layout Constants =====
+const float P_BOARD_X = 50;
+const float P_BOARD_Y = 80;
+const float E_BOARD_X = 630;
+const float E_BOARD_Y = 80;
+const float INFO_X = 50;
+const float INFO_Y = 555;
+const float INFO_W = 1020;
+const float INFO_H = 100;
 
 Game::Game()
     : window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE,
@@ -80,13 +96,16 @@ Game::Game()
       placingHorizontal(true), botLevel(0),
       botThinking(false), botTimer(0),
       soundEnabled(true), autoPlace(false), fullscreen(false),
-      animTimer(0), menuSelection(0), settingsSelection(0) {
+      playerTurnFirst(true),
+      animTimer(0), menuSelection(0), settingsSelection(0),
+      botDirIndex(0), botHunting(false) {
 
+    srand((unsigned)time(nullptr));
     window.setFramerateLimit(60);
     loadResources();
 
-    playerBoard = std::make_unique<Board>(50, 80, false);
-    enemyBoard = std::make_unique<Board>(580, 80, true);
+    playerBoard = std::make_unique<Board>(P_BOARD_X, P_BOARD_Y, false);
+    enemyBoard = std::make_unique<Board>(E_BOARD_X, E_BOARD_Y, true);
 }
 
 Game::~Game() {}
@@ -96,6 +115,10 @@ void Game::loadResources() {
         font.loadFromFile("C:/Windows/Fonts/arial.ttf");
     }
     fontBold = font;
+}
+
+sf::String Game::toUtf8(const std::string& text) const {
+    return sf::String::fromUtf8(text.begin(), text.end());
 }
 
 void Game::applyFullscreen() {
@@ -123,9 +146,8 @@ void Game::run() {
 void Game::handleEvents() {
     sf::Event event;
     while (window.pollEvent(event)) {
-        if (event.type == sf::Event::Closed) {
-            state = GameState::Exit;
-        }
+        if (event.type == sf::Event::Closed) state = GameState::Exit;
+
         if (event.type == sf::Event::KeyPressed) {
             if (state == GameState::Menu) {
                 if (event.key.code == sf::Keyboard::Up && menuSelection > 0) menuSelection--;
@@ -148,10 +170,8 @@ void Game::handleEvents() {
                     if (settingsSelection == 2) soundEnabled = !soundEnabled;
                     if (settingsSelection == 3) { fullscreen = !fullscreen; applyFullscreen(); }
                 }
-                if (event.key.code == sf::Keyboard::Enter && settingsSelection == 4)
-                    state = GameState::Menu;
-                if (event.key.code == sf::Keyboard::Escape)
-                    state = GameState::Menu;
+                if (event.key.code == sf::Keyboard::Enter && settingsSelection == 4) state = GameState::Menu;
+                if (event.key.code == sf::Keyboard::Escape) state = GameState::Menu;
             }
             else if (state == GameState::Rules) {
                 if (event.key.code == sf::Keyboard::Escape || event.key.code == sf::Keyboard::Enter)
@@ -215,43 +235,91 @@ void Game::update(float dt) {
 
 void Game::botMakeMove() {
     if (botLevel == 0) {
+        // Easy: completely random
         int r, c;
         do { r = rand() % BOARD_SIZE; c = rand() % BOARD_SIZE; }
         while (playerBoard->getCellState(r, c) == CellState::Hit ||
                playerBoard->getCellState(r, c) == CellState::Miss);
         playerBoard->shoot(r, c);
     } else {
-        static int lastHitR = -1, lastHitC = -1;
-        static bool hunting = false;
-        if (hunting && lastHitR >= 0) {
-            int dirs[4][2] = {{-1,0},{1,0},{0,-1},{0,1}};
-            for (auto& d : dirs) {
-                int nr = lastHitR + d[0], nc = lastHitC + d[1];
-                if (nr >= 0 && nr < BOARD_SIZE && nc >= 0 && nc < BOARD_SIZE) {
-                    auto s = playerBoard->getCellState(nr, nc);
-                    if (s != CellState::Hit && s != CellState::Miss) {
-                        playerBoard->shoot(nr, nc);
-                        if (playerBoard->getCellState(nr, nc) == CellState::Hit) { lastHitR = nr; lastHitC = nc; }
-                        else hunting = false;
-                        return;
+        // Hard: hunt mode + checkerboard search
+        if (botHunting && !botTargets.empty()) {
+            int tr = botTargets[0].first;
+            int tc = botTargets[0].second;
+
+            if (botTargets.size() >= 2) {
+                bool horizontal = botTargets[0].first == botTargets[1].first;
+                int minR = tr, maxR = tr, minC = tc, maxC = tc;
+                for (auto& t : botTargets) {
+                    minR = std::min(minR, t.first); maxR = std::max(maxR, t.first);
+                    minC = std::min(minC, t.second); maxC = std::max(maxC, t.second);
+                }
+                int nr, nc;
+                if (horizontal) {
+                    nr = tr; nc = maxC + 1;
+                    if (nc >= BOARD_SIZE || playerBoard->getCellState(nr, nc) == CellState::Miss) {
+                        nc = minC - 1;
+                    }
+                } else {
+                    nr = maxR + 1; nc = tc;
+                    if (nr >= BOARD_SIZE || playerBoard->getCellState(nr, nc) == CellState::Miss) {
+                        nr = minR - 1;
                     }
                 }
+                if (nr >= 0 && nr < BOARD_SIZE && nc >= 0 && nc < BOARD_SIZE &&
+                    playerBoard->getCellState(nr, nc) != CellState::Hit &&
+                    playerBoard->getCellState(nr, nc) != CellState::Miss) {
+                    bool hit = playerBoard->shoot(nr, nc);
+                    if (hit) botTargets.push_back({nr, nc});
+                    else { botDirIndex++; if (botDirIndex > 3) { botHunting = false; botTargets.clear(); botDirIndex = 0; } }
+                    return;
+                }
             }
-            hunting = false;
+
+            // Single hit: try neighbors in cross pattern
+            int dirs[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
+            for (int i = botDirIndex; i < 4; i++) {
+                int nr = tr + dirs[i][0], nc = tc + dirs[i][1];
+                if (nr >= 0 && nr < BOARD_SIZE && nc >= 0 && nc < BOARD_SIZE &&
+                    playerBoard->getCellState(nr, nc) != CellState::Hit &&
+                    playerBoard->getCellState(nr, nc) != CellState::Miss) {
+                    botDirIndex = i;
+                    bool hit = playerBoard->shoot(nr, nc);
+                    if (hit) botTargets.push_back({nr, nc});
+                    else botDirIndex++;
+                    return;
+                }
+            }
+            botHunting = false;
+            botTargets.clear();
+            botDirIndex = 0;
         }
-        if (!hunting) {
-            int r, c, attempts = 0;
-            do { r = rand() % BOARD_SIZE; c = rand() % BOARD_SIZE; attempts++; }
-            while (attempts < 200 && ((r + c) % 2 != 0 ||
+
+        if (!botHunting) {
+            // Searching mode: checkerboard pattern
+            int r, c;
+            int attempts = 0;
+            do {
+                r = rand() % BOARD_SIZE;
+                c = rand() % BOARD_SIZE;
+                attempts++;
+            } while (attempts < 300 && ((r + c) % 2 != 0 ||
                      playerBoard->getCellState(r, c) == CellState::Hit ||
                      playerBoard->getCellState(r, c) == CellState::Miss));
-            if (attempts >= 200) {
+
+            if (attempts >= 300) {
                 do { r = rand() % BOARD_SIZE; c = rand() % BOARD_SIZE; }
                 while (playerBoard->getCellState(r, c) == CellState::Hit ||
                        playerBoard->getCellState(r, c) == CellState::Miss);
             }
-            playerBoard->shoot(r, c);
-            if (playerBoard->getCellState(r, c) == CellState::Hit) { lastHitR = r; lastHitC = c; hunting = true; }
+
+            bool hit = playerBoard->shoot(r, c);
+            if (hit) {
+                botHunting = true;
+                botTargets.clear();
+                botTargets.push_back({r, c});
+                botDirIndex = 0;
+            }
         }
     }
 }
@@ -289,7 +357,7 @@ void Game::renderMenu() {
         drawButton(buttons[i], WINDOW_WIDTH / 2 - 150, y, 300, 50, false, i == menuSelection);
     }
     drawText(RU_STRELKI_VYBOR, WINDOW_WIDTH / 2, 560, 16, sf::Color(150, 150, 170), true);
-    drawText(RU_SFML_VER, WINDOW_WIDTH / 2, 700, 14, sf::Color(100, 100, 120), true);
+    drawText(RU_SFML_VER, WINDOW_WIDTH / 2, 680, 14, sf::Color(100, 100, 120), true);
 }
 
 void Game::renderSettings() {
@@ -319,10 +387,10 @@ void Game::renderRules() {
     const char* rules[] = {
         RU_TSEL, "", RU_FLOT_10, RU_1X4_AVI, RU_2X3_KREY, RU_3X2_ESM, RU_4X1_MIN,
         "", RU_UPRAVLENIE, RU_STRELKI_PEREM, RU_ENTER_STREL, RU_PROBEL_POVOROT,
-        RU_ESC_MENU, "", RU_DOP_HOD, RU_POBEDITEL
+        RU_ESC_MENU, "", RU_DOP_HOD, RU_AVTOVYCHEK, RU_POBEDITEL
     };
-    for (int i = 0; i < 16; i++) drawText(rules[i], 100, 120 + i * 28, 20, TEXT, false);
-    drawText(RU_NAZHMI_ENTER_ESC, WINDOW_WIDTH / 2, 680, 18, TEXT_GOLD, true);
+    for (int i = 0; i < 17; i++) drawText(rules[i], 100, 110 + i * 26, 19, TEXT, false);
+    drawText(RU_NAZHMI_ENTER_ESC, WINDOW_WIDTH / 2, 660, 18, TEXT_GOLD, true);
 }
 
 void Game::startPlacement() {
@@ -338,33 +406,34 @@ void Game::renderPlacement() {
     int size = FLEET_SIZES[currentShipIdx];
     bool valid = playerBoard->canPlaceShip(cursorR, cursorC, size, placingHorizontal);
     playerBoard->draw(window, font, cursorR, cursorC, true, size, placingHorizontal, valid);
-    drawText(RU_VASHE_POLE, 50 + BOARD_PIXELS / 2, 55, 18, TEXT_GOLD, true);
+    drawText(RU_VASHE_POLE, P_BOARD_X + BOARD_PIXELS / 2 + 20, 55, 18, TEXT_GOLD, true);
 
-    float panelX = 50 + BOARD_PIXELS + 50;
-    sf::RectangleShape panel(sf::Vector2f(280, 530));
-    panel.setPosition(panelX, 70);
+    float panelX = P_BOARD_X + BOARD_PIXELS + 60;
+    sf::RectangleShape panel(sf::Vector2f(260, 440));
+    panel.setPosition(panelX, P_BOARD_Y);
     panel.setFillColor(PANEL_BG);
     panel.setOutlineColor(GRID_LINE);
     panel.setOutlineThickness(1);
     window.draw(panel);
 
-    drawText(RU_KORABL, panelX + 15, 80, 20, TEXT, false);
-    drawText(std::to_string(size) + RU_PALUBNYY, panelX + 15, 105, 22, TEXT_GOLD, false);
-    drawText(RU_NAPRAVLENIE, panelX + 15, 140, 16, TEXT, false);
-    drawText(placingHorizontal ? RU_GORIZ : RU_VERT, panelX + 15, 160, 16, sf::Color(100, 200, 255), false);
-    if (valid) drawText(RU_OK_STAVIT, panelX + 15, 190, 16, sf::Color(50, 200, 80), false);
-    else       drawText(RU_MESTO_ZANYATO, panelX + 15, 190, 16, sf::Color(255, 80, 80), false);
+    drawText(RU_KORABL, panelX + 15, P_BOARD_Y + 15, 20, TEXT, false);
+    drawText(std::to_string(size) + RU_PALUBNYY, panelX + 15, P_BOARD_Y + 42, 22, TEXT_GOLD, false);
+    drawText(RU_NAPRAVLENIE, panelX + 15, P_BOARD_Y + 80, 16, TEXT, false);
+    drawText(placingHorizontal ? RU_GORIZ : RU_VERT, panelX + 15, P_BOARD_Y + 100, 16, sf::Color(100, 200, 255), false);
+    if (valid) drawText(RU_OK_STAVIT, panelX + 15, P_BOARD_Y + 135, 16, sf::Color(50, 200, 80), false);
+    else       drawText(RU_MESTO_ZANYATO, panelX + 15, P_BOARD_Y + 135, 16, sf::Color(255, 80, 80), false);
 
-    drawText(RU_UPRAVLENIE, panelX + 15, 225, 15, sf::Color(150, 150, 170), false);
-    drawText(RU_STRELKI_DVIZH, panelX + 15, 245, 15, sf::Color(150, 150, 170), false);
-    drawText(RU_PROBEL_POV, panelX + 15, 262, 15, sf::Color(150, 150, 170), false);
-    drawText(RU_ENTER_POSTAVIT, panelX + 15, 279, 15, sf::Color(150, 150, 170), false);
-    drawText(RU_ESC_MENU_TXT, panelX + 15, 296, 15, sf::Color(150, 150, 170), false);
+    drawText(RU_UPRAVLENIE, panelX + 15, P_BOARD_Y + 175, 15, sf::Color(150, 150, 170), false);
+    drawText(RU_STRELKI_DVIZH, panelX + 15, P_BOARD_Y + 195, 15, sf::Color(150, 150, 170), false);
+    drawText(RU_PROBEL_POV, panelX + 15, P_BOARD_Y + 212, 15, sf::Color(150, 150, 170), false);
+    drawText(RU_ENTER_POSTAVIT, panelX + 15, P_BOARD_Y + 229, 15, sf::Color(150, 150, 170), false);
+    drawText(RU_ESC_MENU_TXT, panelX + 15, P_BOARD_Y + 246, 15, sf::Color(150, 150, 170), false);
 
-    drawText(std::to_string(currentShipIdx) + " / " + std::to_string(FLEET_COUNT), panelX + 15, 325, 20, TEXT_GOLD, false);
-    drawText(RU_OSTALOS, panelX + 15, 355, 15, sf::Color(150, 150, 170), false);
+    drawText(std::to_string(currentShipIdx) + " / " + std::to_string(FLEET_COUNT),
+             panelX + 15, P_BOARD_Y + 280, 20, TEXT_GOLD, false);
+    drawText(RU_OSTALOS, panelX + 15, P_BOARD_Y + 310, 15, sf::Color(150, 150, 170), false);
 
-    int yPos = 375, fontSize = 14, lineHeight = 17;
+    int yPos = P_BOARD_Y + 330, fontSize = 14, lineHeight = 17;
     int counts[5] = {0, 0, 0, 0, 0};
     for (int i = currentShipIdx; i < FLEET_COUNT; i++) { int s = FLEET_SIZES[i]; if (s >= 1 && s <= 4) counts[4 - s]++; }
     for (int deck = 4; deck >= 1; deck--) {
@@ -378,59 +447,93 @@ void Game::renderPlacement() {
 }
 
 void Game::startBattle() {
-    state = GameState::Battle; cursorR = 0; cursorC = 0; botThinking = false;
+    state = GameState::Battle;
+    cursorR = 0; cursorC = 0; botThinking = false;
+    botTargets.clear(); botHunting = false; botDirIndex = 0;
+    // Random first turn (50/50)
+    playerTurnFirst = (rand() % 2 == 0);
+    if (!playerTurnFirst) {
+        state = GameState::BotTurn;
+        botTimer = 0;
+        botThinking = true;
+    }
 }
 
 void Game::renderBattle() {
-    drawText(RU_BOY_S_BOTOM, WINDOW_WIDTH / 2, 10, 22, TEXT_GOLD, true);
-    enemyBoard->draw(window, font, cursorR, cursorC, false, 0, true, true);
-    drawText(RU_POLE_VRAGA, 580 + BOARD_PIXELS / 2, 55, 16, sf::Color(255, 100, 100), true);
-    playerBoard->draw(window, font, -1, -1, true, 0, true, true);
-    drawText(RU_VASHE_POLE, 50 + BOARD_PIXELS / 2, 55, 16, sf::Color(100, 255, 100), true);
+    drawText(RU_BOY_S_BOTOM, WINDOW_WIDTH / 2, 15, 24, TEXT_GOLD, true);
 
-    sf::RectangleShape infoPanel(sf::Vector2f(180, 100));
-    infoPanel.setPosition(50, 580); infoPanel.setFillColor(PANEL_BG);
-    infoPanel.setOutlineColor(GRID_LINE); infoPanel.setOutlineThickness(1);
+    drawText(RU_VASHE_POLE, P_BOARD_X + BOARD_PIXELS / 2 + 20, 55, 18, sf::Color(100, 255, 150), true);
+    drawText(RU_POLE_VRAGA, E_BOARD_X + BOARD_PIXELS / 2 + 20, 55, 18, sf::Color(255, 120, 100), true);
+
+    // Draw both boards (fully visible, no overlap)
+    playerBoard->draw(window, font, -1, -1, true, 0, true, true);
+    enemyBoard->draw(window, font, cursorR, cursorC, false, 0, true, true);
+
+    // ===== Bottom Info Panel (NO overlap with boards) =====
+    sf::RectangleShape infoPanel(sf::Vector2f(INFO_W, INFO_H));
+    infoPanel.setPosition(INFO_X, INFO_Y);
+    infoPanel.setFillColor(PANEL_BG);
+    infoPanel.setOutlineColor(GRID_LINE);
+    infoPanel.setOutlineThickness(2);
     window.draw(infoPanel);
 
-    drawText(RU_VRAG + std::to_string(enemyBoard->getShipsAlive()) + RU_KOR, 65, 590, 16, sf::Color(255, 100, 100), false);
-    drawText(RU_VY + std::to_string(playerBoard->getShipsAlive()) + RU_KOR, 65, 615, 16, sf::Color(100, 255, 100), false);
-    drawText(u8"\u0421\u0442\u0440\u0435\u043B\u043A\u0438 | ENTER | ESC", 65, 640, 14, sf::Color(150, 150, 170), false);
-    drawText(RU_PRITSEL + std::string(1, 'A' + cursorC) + std::to_string(cursorR + 1), 580, 580, 18, TEXT_GOLD, false);
+    // Left: ship counts
+    drawText(RU_VY + std::to_string(playerBoard->getShipsAlive()) + RU_KOR + "  |  " +
+             RU_VRAG + std::to_string(enemyBoard->getShipsAlive()) + RU_KOR,
+             INFO_X + 30, INFO_Y + 15, 20, TEXT, false);
+
+    // Center: crosshair coordinates
+    std::string aimStr = std::string(RU_PRITSEL) + char('A' + cursorC) + std::to_string(cursorR + 1);
+    drawText(aimStr, WINDOW_WIDTH / 2, INFO_Y + 15, 24, TEXT_GOLD, true);
+
+    // Right: destroyed deck count
+    drawText(std::string(RU_PALKI) + std::to_string(20 - enemyBoard->getShipsAlive() * 2),
+             INFO_X + INFO_W - 280, INFO_Y + 15, 18, sf::Color(255, 180, 50), false);
+
+    // Bottom: controls hint
+    drawText(u8"\u0421\u0442\u0440\u0435\u043B\u043A\u0438 - \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435 | ENTER - \u0432\u044B\u0441\u0442\u0440\u0435\u043B | ESC - \u043C\u0435\u043D\u044E",
+             WINDOW_WIDTH / 2, INFO_Y + 55, 16, sf::Color(150, 150, 170), true);
+
+    // First turn indicator
+    drawText(std::string(RU_PERVYY_HOD) + (playerTurnFirst ? RU_VY_HODITE : RU_BOT_HODIT),
+             INFO_X + 30, INFO_Y + 55, 16, sf::Color(100, 200, 255), false);
 }
 
 void Game::renderBotTurn() {
     renderBattle();
-    sf::RectangleShape overlay(sf::Vector2f(WINDOW_WIDTH, WINDOW_HEIGHT));
-    overlay.setFillColor(sf::Color(0, 0, 0, 120));
+    sf::RectangleShape overlay(sf::Vector2f(BOARD_PIXELS + 40, BOARD_PIXELS + 40));
+    overlay.setPosition(E_BOARD_X + 8, E_BOARD_Y + 8);
+    overlay.setFillColor(sf::Color(0, 0, 0, 80));
     window.draw(overlay);
-    drawText(RU_BOT_DUMAET, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 36, sf::Color(255, 200, 50), true);
+    drawText(RU_BOT_DUMAET, E_BOARD_X + BOARD_PIXELS / 2 + 20, E_BOARD_Y + BOARD_PIXELS / 2, 36,
+             sf::Color(255, 200, 50), true);
     int dots = (int)(botTimer * 3) % 4;
-    drawText(std::string(dots, '.'), WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2 + 40, 30, sf::Color(255, 200, 50), true);
+    drawText(std::string(dots, '.'), E_BOARD_X + BOARD_PIXELS / 2 + 20,
+             E_BOARD_Y + BOARD_PIXELS / 2 + 35, 30, sf::Color(255, 200, 50), true);
 }
 
 void Game::renderVictory() {
     sf::RectangleShape overlay(sf::Vector2f(WINDOW_WIDTH, WINDOW_HEIGHT));
     overlay.setFillColor(sf::Color(0, 30, 0, 180));
     window.draw(overlay);
-    drawText(RU_VY_POBEHDILI, WINDOW_WIDTH / 2, 250, 56, sf::Color(50, 255, 100), true);
-    drawText(RU_FLOT_UNICHTOZHEN, WINDOW_WIDTH / 2, 330, 24, TEXT, true);
-    drawText(RU_ENTER_MENU, WINDOW_WIDTH / 2, 450, 20, TEXT_GOLD, true);
+    drawText(RU_VY_POBEHDILI, WINDOW_WIDTH / 2, 240, 56, sf::Color(50, 255, 100), true);
+    drawText(RU_FLOT_UNICHTOZHEN, WINDOW_WIDTH / 2, 330, 26, TEXT, true);
+    drawText(RU_ENTER_MENU, WINDOW_WIDTH / 2, 450, 22, TEXT_GOLD, true);
 }
 
 void Game::renderDefeat() {
     sf::RectangleShape overlay(sf::Vector2f(WINDOW_WIDTH, WINDOW_HEIGHT));
     overlay.setFillColor(sf::Color(30, 0, 0, 180));
     window.draw(overlay);
-    drawText(RU_VY_PROIGRALI, WINDOW_WIDTH / 2, 250, 56, sf::Color(255, 50, 50), true);
-    drawText(RU_VASH_FLOT_POTOP, WINDOW_WIDTH / 2, 330, 24, TEXT, true);
-    drawText(RU_ENTER_MENU, WINDOW_WIDTH / 2, 450, 20, TEXT_GOLD, true);
+    drawText(RU_VY_PROIGRALI, WINDOW_WIDTH / 2, 240, 56, sf::Color(255, 50, 50), true);
+    drawText(RU_VASH_FLOT_POTOP, WINDOW_WIDTH / 2, 330, 26, TEXT, true);
+    drawText(RU_ENTER_MENU, WINDOW_WIDTH / 2, 450, 22, TEXT_GOLD, true);
 }
 
-// UTF-8 safe text rendering using SFML's fromUtf8
+// ===== UTF-8 Safe Text Rendering =====
 void Game::drawText(const std::string& text, float x, float y, int size, sf::Color color, bool center) {
     sf::Text t;
-    t.setString(sf::String::fromUtf8(text.begin(), text.end()));
+    t.setString(toUtf8(text));
     t.setFont(font);
     t.setCharacterSize(size);
     t.setFillColor(color);
@@ -442,7 +545,6 @@ void Game::drawText(const std::string& text, float x, float y, int size, sf::Col
     window.draw(t);
 }
 
-// UTF-8 safe button rendering
 void Game::drawButton(const std::string& text, float x, float y, float w, float h, bool hovered, bool selected) {
     sf::RectangleShape button(sf::Vector2f(w, h));
     button.setPosition(x, y);
@@ -454,7 +556,7 @@ void Game::drawButton(const std::string& text, float x, float y, float w, float 
     window.draw(button);
 
     sf::Text label;
-    label.setString(sf::String::fromUtf8(text.begin(), text.end()));
+    label.setString(toUtf8(text));
     label.setFont(font);
     label.setCharacterSize(24);
     label.setFillColor(BUTTON_TEXT);
@@ -475,4 +577,5 @@ void Game::playMissSound() {}
 void Game::resetGame() {
     playerBoard->clear(); enemyBoard->clear();
     cursorR = 0; cursorC = 0; currentShipIdx = 0; menuSelection = 0;
+    botTargets.clear(); botHunting = false; botDirIndex = 0;
 }

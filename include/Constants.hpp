@@ -7,15 +7,15 @@
 
 // --- Размеры ---
 const int BOARD_SIZE = 10;
-const int CELL_SIZE = 48;
+const int CELL_SIZE = 42;
 const int CELL_MARGIN = 2;
 const int BOARD_PIXELS = BOARD_SIZE * (CELL_SIZE + CELL_MARGIN);
 
 // --- Окно ---
-const int WINDOW_WIDTH = 1100;
-const int WINDOW_HEIGHT = 750;
-// UTF-8 encoded: "Морской Бой - SFML"
-#define WINDOW_TITLE u8"\u041C\u043E\u0440\u0441\u043A\u043E\u0439 \u0411\u043E\u0439 - SFML"
+const int WINDOW_WIDTH = 1200;
+const int WINDOW_HEIGHT = 700;
+// Keep window title ASCII to avoid Windows API encoding issues
+#define WINDOW_TITLE "Sea Battle - SFML"
 
 // --- Цвета ---
 namespace Colors {
@@ -24,7 +24,7 @@ namespace Colors {
     const sf::Color SHIP       (139, 90,  43);
     const sf::Color SHIP_HIT   (180, 50,  30);
     const sf::Color HIT        (255, 60,  60);
-    const sf::Color MISS       (200, 200, 220);
+    const sf::Color MISS       (130, 130, 160);
     const sf::Color CURSOR     (255, 255, 0);
     const sf::Color GRID_LINE  (60,  130, 200);
     const sf::Color BG         (10,  25,  50);
@@ -37,6 +37,7 @@ namespace Colors {
     const sf::Color BUTTON     (40,  100, 160);
     const sf::Color BUTTON_HOVER(60, 140, 220);
     const sf::Color BUTTON_TEXT(255, 255, 255);
+    const sf::Color AURA_MARK  (80, 80, 110);
 }
 
 // --- Флот ---

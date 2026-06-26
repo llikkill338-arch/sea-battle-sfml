@@ -6,6 +6,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <memory>
+#include <vector>
 #include "Board.hpp"
 
 enum class GameState {
@@ -24,48 +25,52 @@ class Game {
 public:
     Game();
     ~Game();
-    
     void run();
 
 private:
     sf::RenderWindow window;
     sf::Font font;
     sf::Font fontBold;
-    
+
     GameState state;
     GameState prevState;
-    
+
     std::unique_ptr<Board> playerBoard;
     std::unique_ptr<Board> enemyBoard;
-    
+
     int cursorR, cursorC;
-    
     int currentShipIdx;
     bool placingHorizontal;
-    
+
     int botLevel;
     bool botThinking;
     float botTimer;
-    
+
     bool soundEnabled;
     bool autoPlace;
     bool fullscreen;
-    
+    bool playerTurnFirst;
+
     float animTimer;
     int menuSelection;
     int settingsSelection;
-    
+
+    // Bot AI state for hard mode
+    std::vector<std::pair<int,int>> botTargets;
+    int botDirIndex;
+    bool botHunting;
+
     sf::SoundBuffer hitBuffer;
     sf::SoundBuffer missBuffer;
     sf::Sound sound;
-    
+
     void loadResources();
     void handleEvents();
     void update(float dt);
     void render();
-    
+
     void applyFullscreen();
-    
+
     void renderMenu();
     void renderSettings();
     void renderRules();
@@ -74,12 +79,12 @@ private:
     void renderBotTurn();
     void renderVictory();
     void renderDefeat();
-    
+
     void startPlacement();
     void startBattle();
     void botMakeMove();
     void resetGame();
-    
+
     void drawText(const std::string& text, float x, float y, int size,
                   sf::Color color, bool center = false);
     void drawButton(const std::string& text, float x, float y, float w, float h,
@@ -87,4 +92,7 @@ private:
     bool isMouseOver(float x, float y, float w, float h) const;
     void playHitSound();
     void playMissSound();
+
+    // UTF-8 helpers
+    sf::String toUtf8(const std::string& text) const;
 };
