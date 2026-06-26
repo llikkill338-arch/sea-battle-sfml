@@ -1,15 +1,18 @@
 // ============================================================================
-// Game.hpp - Главный игровой класс (v4.0 Pirate Edition)
+// Game.hpp - v5.0 Pixel-Art + Sound Edition (No PNGs, all code-drawn)
 // ============================================================================
 
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <memory>
 #include <vector>
 #include <string>
 #include "Board.hpp"
 
-enum class GameState { Menu, Settings, Rules, Placement, Battle, BotTurn, Victory, Defeat, Exit };
+enum class GameState {
+    Menu, Settings, Rules, Placement, Battle, BotTurn, Victory, Defeat, Exit
+};
 
 struct BattleMessage {
     std::string text;
@@ -17,10 +20,11 @@ struct BattleMessage {
     sf::Color color;
 };
 
-struct ExplosionEffect {
-    float x, y;
+struct ExplosionParticle {
+    float x, y, vx, vy;
     float timer;
-    float scale;
+    sf::Color color;
+    float size;
 };
 
 class Game {
@@ -32,8 +36,8 @@ public:
 private:
     sf::RenderWindow window;
     sf::Font font;
-
     GameState state;
+
     std::unique_ptr<Board> playerBoard;
     std::unique_ptr<Board> enemyBoard;
 
@@ -51,19 +55,18 @@ private:
     int botDirIndex;
     bool botHunting;
 
-    // Pirate sprites
-    sf::Texture texFrigate, texSkeleton, texTreasure, texPalms, texExplosion;
-    sf::Sprite sprFrigate, sprSkeleton, sprTreasure, sprPalms, sprExplosion;
-    bool spritesLoaded;
-
-    // Effects
+    // Messages & explosions
     std::vector<BattleMessage> messages;
-    std::vector<ExplosionEffect> explosions;
-    float messageTimer;
-    std::string lastMessage;
+    std::vector<ExplosionParticle> particles;
+
+    // ===== SOUND =====
+    sf::SoundBuffer hitBuf, missBuf, sunkBuf, musicBuf;
+    sf::Sound hitSound, missSound, sunkSound;
+    sf::Music bgMusic;  // use sf::Music for streaming large files
+    bool soundsLoaded;
 
     void loadResources();
-    bool loadTexture(sf::Texture& tex, const std::string& path);
+    void loadSounds();
     void handleEvents();
     void update(float dt);
     void render();
@@ -85,18 +88,30 @@ private:
     void botMakeMove();
     void resetGame();
     void addMessage(const std::string& text, sf::Color color);
-    void addExplosion(float x, float y);
+    void spawnExplosion(float cx, float cy);
 
     // Drawing helpers
     void drawText(const std::string& text, float x, float y, int size, sf::Color color, bool center);
     void drawButton(const std::string& text, float x, float y, float w, float h, bool hovered, bool selected);
-    void drawDecorations();
     void drawInfoPanel();
     sf::String toUtf8(const std::string& text) const;
+
+    // ===== PIXEL ART (all drawn with code) =====
+    void drawPixelFrigate(float x, float y);
+    void drawPixelSkeleton(float x, float y);
+    void drawPixelTreasure(float x, float y);
+    void drawPixelPalms(float x, float y);
+    void drawPixelExplosion(float x, float y, float scale);
+    void drawDecorations();
+    void drawParticles();
 
     // Pirate phrases
     std::string getRandomHitPhrase() const;
     std::string getRandomMissPhrase() const;
     std::string getRandomSunkPhrase() const;
     std::string getRandomBotHitPhrase() const;
+
+    void playHitSound();
+    void playMissSound();
+    void playSunkSound();
 };
