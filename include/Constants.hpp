@@ -1,23 +1,19 @@
 // ============================================================================
-// Constants.hpp - Все константы игры
+// Constants.hpp - Все константы игры (Pirate Edition)
 // ============================================================================
 
 #pragma once
 #include <SFML/Graphics.hpp>
 
-// --- Размеры ---
 const int BOARD_SIZE = 10;
 const int CELL_SIZE = 42;
 const int CELL_MARGIN = 2;
 const int BOARD_PIXELS = BOARD_SIZE * (CELL_SIZE + CELL_MARGIN);
 
-// --- Окно ---
 const int WINDOW_WIDTH = 1200;
 const int WINDOW_HEIGHT = 700;
-// Keep window title ASCII to avoid Windows API encoding issues
 #define WINDOW_TITLE "Sea Battle - SFML"
 
-// --- Цвета ---
 namespace Colors {
     const sf::Color WATER      (30,  80,  140);
     const sf::Color WATER_DARK (20,  60,  110);
@@ -40,10 +36,8 @@ namespace Colors {
     const sf::Color AURA_MARK  (80, 80, 110);
 }
 
-// --- Флот ---
 const int FLEET_COUNT = 10;
 const int FLEET_SIZES[FLEET_COUNT] = {4, 3, 3, 2, 2, 2, 1, 1, 1, 1};
 
-// --- Задержки ---
 const float ANIMATION_SPEED = 0.15f;
 const float BOT_THINK_DELAY = 0.8f;
