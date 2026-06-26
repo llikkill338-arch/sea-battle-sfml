@@ -14,7 +14,8 @@ const int BOARD_PIXELS = BOARD_SIZE * (CELL_SIZE + CELL_MARGIN);
 // --- Окно ---
 const int WINDOW_WIDTH = 1100;
 const int WINDOW_HEIGHT = 750;
-#define WINDOW_TITLE "Morskoj Boj - SFML"
+// Unicode title: "Морской Бой - SFML"
+#define WINDOW_TITLE "\u041C\u043E\u0440\u0441\u043A\u043E\u0439 \u0411\u043E\u0439 - SFML"
 
 // --- Цвета ---
 namespace Colors {
