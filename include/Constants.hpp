@@ -14,7 +14,7 @@ const int BOARD_PIXELS = BOARD_SIZE * (CELL_SIZE + CELL_MARGIN);
 // --- Окно ---
 const int WINDOW_WIDTH = 1100;
 const int WINDOW_HEIGHT = 750;
-const char* WINDOW_TITLE = "Morskoj Boj - SFML";
+#define WINDOW_TITLE "Morskoj Boj - SFML"
 
 // --- Цвета ---
 namespace Colors {
