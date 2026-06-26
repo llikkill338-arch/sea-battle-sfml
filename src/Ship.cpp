@@ -7,7 +7,7 @@
 using namespace Colors;
 
 Ship::Ship(int startR, int startC, int size, bool horizontal)
-    : size(size), horizontal(horizontal) {
+    : size(size), horizontal(horizontal), startRow(startR), startCol(startC) {
     for (int i = 0; i < size; i++) {
         ShipPart p;
         if (horizontal) { p.r = startR; p.c = startC + i; }
@@ -17,9 +17,19 @@ Ship::Ship(int startR, int startC, int size, bool horizontal)
     }
 }
 
-bool Ship::hunches(int r, int c) const {
+bool Ship::contains(int r, int c) const {
     for (const auto& p : parts) {
         if (p.r == r && p.c == c) return true;
+    }
+    return false;
+}
+
+bool Ship::hunches(int r, int c) const {
+    for (const auto& p : parts) {
+        if (p.r == r && p.c == c) {
+            const_cast<ShipPart&>(p).state = PartState::Damaged;
+            return true;
+        }
     }
     return false;
 }
@@ -35,23 +45,23 @@ const ShipPart& Ship::getPart(int idx) const {
     return parts[idx];
 }
 
-void Ship::draw(sf::RenderWindow& window, float offsetX, float offsetY, 
+void Ship::draw(sf::RenderWindow& window, float offsetX, float offsetY,
                 float cellSize, bool showShips, bool isEnemy) const {
     if (!isEnemy || showShips || isSunk()) {
         for (const auto& part : parts) {
             float x = offsetX + part.c * (cellSize + CELL_MARGIN);
             float y = offsetY + part.r * (cellSize + CELL_MARGIN);
-            
+
             sf::RectangleShape partShape;
             partShape.setSize(sf::Vector2f(cellSize - 2, cellSize - 2));
             partShape.setPosition(x + 1, y + 1);
-            
+
             if (part.state == PartState::Damaged) {
                 partShape.setFillColor(SHIP_HIT);
             } else {
                 partShape.setFillColor(SHIP);
             }
-            
+
             window.draw(partShape);
         }
     }
